@@ -33,6 +33,7 @@
 		322F5B1D1EEFB97D00E94033 /* KeyPathAccessibleArrayTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 322F5B1C1EEFB97D00E94033 /* KeyPathAccessibleArrayTests.swift */; };
 		322F5B1F1EEFC1AF00E94033 /* KeyPathAccessibleDictionaryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 322F5B1E1EEFC1AF00E94033 /* KeyPathAccessibleDictionaryTests.swift */; };
 		322F5B211EEFC48F00E94033 /* KeyPathAccessibleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 322F5B201EEFC48F00E94033 /* KeyPathAccessibleTests.swift */; };
+		322F5B271EEFD0C300E94033 /* Authentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 322F5B261EEFD0C300E94033 /* Authentication.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -76,6 +77,7 @@
 		322F5B1C1EEFB97D00E94033 /* KeyPathAccessibleArrayTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyPathAccessibleArrayTests.swift; sourceTree = "<group>"; };
 		322F5B1E1EEFC1AF00E94033 /* KeyPathAccessibleDictionaryTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyPathAccessibleDictionaryTests.swift; sourceTree = "<group>"; };
 		322F5B201EEFC48F00E94033 /* KeyPathAccessibleTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyPathAccessibleTests.swift; sourceTree = "<group>"; };
+		322F5B261EEFD0C300E94033 /* Authentication.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Authentication.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -201,6 +203,7 @@
 		322F5AFB1EEFACA900E94033 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				322F5B261EEFD0C300E94033 /* Authentication.swift */,
 				322F5AFC1EEFACCA00E94033 /* User.swift */,
 			);
 			path = Models;
@@ -334,6 +337,7 @@
 				322F5AAE1EEF8D1000E94033 /* AppDelegate.swift in Sources */,
 				322F5B1A1EEFB81900E94033 /* KeyPathAccessible.swift in Sources */,
 				322F5AFD1EEFACCA00E94033 /* User.swift in Sources */,
+				322F5B271EEFD0C300E94033 /* Authentication.swift in Sources */,
 				322F5AD61EEF8EED00E94033 /* NetworkRequest.swift in Sources */,
 				322F5B411EF0959E00E94033 /* DataRepresentable.swift in Sources */,
 				322F5B191EEFB81900E94033 /* KeyPathAccessible+Dictionary.swift in Sources */,
