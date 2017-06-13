@@ -37,6 +37,7 @@
 		322F5B271EEFD0C300E94033 /* Authentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 322F5B261EEFD0C300E94033 /* Authentication.swift */; };
 		322F5B411EF0959E00E94033 /* DataRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 322F5B401EF0959E00E94033 /* DataRepresentable.swift */; };
 		322F5B471EF099AF00E94033 /* AuthenticationRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 322F5B461EF099AF00E94033 /* AuthenticationRequest.swift */; };
+		322F5B291EEFD1EB00E94033 /* AuthenticationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 322F5B281EEFD1EB00E94033 /* AuthenticationController.swift */; };
 		322F5B2C1EF06D4B00E94033 /* KeyValueStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 322F5B2B1EF06D4B00E94033 /* KeyValueStore.swift */; };
 /* End PBXBuildFile section */
 
@@ -85,6 +86,7 @@
 		322F5B261EEFD0C300E94033 /* Authentication.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Authentication.swift; sourceTree = "<group>"; };
 		322F5B401EF0959E00E94033 /* DataRepresentable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataRepresentable.swift; sourceTree = "<group>"; };
 		322F5B461EF099AF00E94033 /* AuthenticationRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthenticationRequest.swift; sourceTree = "<group>"; };
+		322F5B281EEFD1EB00E94033 /* AuthenticationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthenticationController.swift; sourceTree = "<group>"; };
 		322F5B2B1EF06D4B00E94033 /* KeyValueStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyValueStore.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -205,6 +207,7 @@
 			isa = PBXGroup;
 			children = (
 				322F5AEE1EEFAB4C00E94033 /* Authenticator.swift */,
+				322F5B281EEFD1EB00E94033 /* AuthenticationController.swift */,
 				322F5AEF1EEFAB4C00E94033 /* MockTwitterAuthenticator.swift */,
 			);
 			path = Authentication;
@@ -378,6 +381,7 @@
 				322F5B271EEFD0C300E94033 /* Authentication.swift in Sources */,
 				322F5AD61EEF8EED00E94033 /* NetworkRequest.swift in Sources */,
 				322F5B411EF0959E00E94033 /* DataRepresentable.swift in Sources */,
+				322F5B291EEFD1EB00E94033 /* AuthenticationController.swift in Sources */,
 				322F5B2C1EF06D4B00E94033 /* KeyValueStore.swift in Sources */,
 				322F5B191EEFB81900E94033 /* KeyPathAccessible+Dictionary.swift in Sources */,
 				322F5AE71EEF99FE00E94033 /* Collection+Random.swift in Sources */,
