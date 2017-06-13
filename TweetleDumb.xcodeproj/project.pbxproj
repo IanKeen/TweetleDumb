@@ -22,6 +22,7 @@
 		322F5AE51EEF95FA00E94033 /* MockNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 322F5AE41EEF95FA00E94033 /* MockNetwork.swift */; };
 		322F5AE71EEF99FE00E94033 /* Collection+Random.swift in Sources */ = {isa = PBXBuildFile; fileRef = 322F5AE61EEF99FE00E94033 /* Collection+Random.swift */; };
 		322F5AEB1EEFAA1100E94033 /* authentication.json in Resources */ = {isa = PBXBuildFile; fileRef = 322F5AEA1EEFAA1100E94033 /* authentication.json */; };
+		322F5B021EEFB35E00E94033 /* NetworkResponseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 322F5B001EEFB29F00E94033 /* NetworkResponseTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +55,7 @@
 		322F5AE41EEF95FA00E94033 /* MockNetwork.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockNetwork.swift; sourceTree = "<group>"; };
 		322F5AE61EEF99FE00E94033 /* Collection+Random.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Collection+Random.swift"; sourceTree = "<group>"; };
 		322F5AEA1EEFAA1100E94033 /* authentication.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = authentication.json; sourceTree = "<group>"; };
+		322F5B001EEFB29F00E94033 /* NetworkResponseTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkResponseTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,6 +142,7 @@
 				322F5AD21EEF8EED00E94033 /* Network.swift */,
 				322F5AD31EEF8EED00E94033 /* NetworkRequest.swift */,
 				322F5AD41EEF8EED00E94033 /* NetworkResponse.swift */,
+				322F5B001EEFB29F00E94033 /* NetworkResponseTests.swift */,
 				322F5B401EF0959E00E94033 /* DataRepresentable.swift */,
 			);
 			path = Network;
@@ -283,6 +286,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				322F5B021EEFB35E00E94033 /* NetworkResponseTests.swift in Sources */,
 				322F5AE01EEF90E700E94033 /* TestCommon.swift in Sources */,
 				322F5ADC1EEF8FDC00E94033 /* ResultTests.swift in Sources */,
 				322F5ADE1EEF906900E94033 /* Result+Tests.swift in Sources */,
