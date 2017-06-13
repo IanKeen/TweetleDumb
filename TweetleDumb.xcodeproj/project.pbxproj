@@ -11,6 +11,7 @@
 		322F5AB51EEF8D1000E94033 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 322F5AB41EEF8D1000E94033 /* Assets.xcassets */; };
 		322F5AB81EEF8D1000E94033 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 322F5AB61EEF8D1000E94033 /* LaunchScreen.storyboard */; };
 		322F5AC31EEF8D1000E94033 /* TweetleDumbTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 322F5AC21EEF8D1000E94033 /* TweetleDumbTests.swift */; };
+		322F5AE01EEF90E700E94033 /* TestCommon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 322F5ADF1EEF90E700E94033 /* TestCommon.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,6 +33,7 @@
 		322F5ABE1EEF8D1000E94033 /* TweetleDumbTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TweetleDumbTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		322F5AC21EEF8D1000E94033 /* TweetleDumbTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetleDumbTests.swift; sourceTree = "<group>"; };
 		322F5AC41EEF8D1000E94033 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		322F5ADF1EEF90E700E94033 /* TestCommon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestCommon.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,8 +86,9 @@
 		322F5AC11EEF8D1000E94033 /* TweetleDumbTests */ = {
 			isa = PBXGroup;
 			children = (
-				322F5AC21EEF8D1000E94033 /* TweetleDumbTests.swift */,
 				322F5AC41EEF8D1000E94033 /* Info.plist */,
+				322F5ADF1EEF90E700E94033 /* TestCommon.swift */,
+				322F5AC21EEF8D1000E94033 /* TweetleDumbTests.swift */,
 			);
 			path = TweetleDumbTests;
 			sourceTree = "<group>";
@@ -202,6 +205,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				322F5AE01EEF90E700E94033 /* TestCommon.swift in Sources */,
 				322F5AC31EEF8D1000E94033 /* TweetleDumbTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
