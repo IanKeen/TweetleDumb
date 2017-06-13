@@ -13,3 +13,19 @@ struct User {
     let email: String
     let handle: String
 }
+
+extension User {
+    init(json: [String: Any]) throws {
+        self.realName = try json.value(at: "real_name")
+        self.email = try json.value(at: "email")
+        self.handle = try json.value(at: "handle")
+    }
+
+    func makeDictionary() -> [String: Any] {
+        return [
+            "real_name": realName,
+            "email": email,
+            "handle": handle,
+        ]
+    }
+}

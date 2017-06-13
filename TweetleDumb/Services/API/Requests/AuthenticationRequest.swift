@@ -26,18 +26,9 @@ struct AuthenticationRequest: APIRequest {
 
     func handle(response: NetworkResponse) throws -> Authentication {
         guard
-            let json = response.jsonDictionary,
-            let token = json["token"] as? String,
-            let user = json["user"] as? [String: Any]
+            let json = response.jsonDictionary
             else { throw NetworkError.invalidResponse(response) }
 
-        return Authentication(
-            token: token,
-            user: User(
-                realName: try user.value(at: "real_name"),
-                email: try user.value(at: "email"),
-                handle: try user.value(at: "handle")
-            )
-        )
+        return try Authentication(json: json)
     }
 }
