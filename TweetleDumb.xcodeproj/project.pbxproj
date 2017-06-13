@@ -19,6 +19,7 @@
 		322F5ADE1EEF906900E94033 /* Result+Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 322F5ADD1EEF906900E94033 /* Result+Tests.swift */; };
 		322F5AE01EEF90E700E94033 /* TestCommon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 322F5ADF1EEF90E700E94033 /* TestCommon.swift */; };
 		322F5B411EF0959E00E94033 /* DataRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 322F5B401EF0959E00E94033 /* DataRepresentable.swift */; };
+		322F5AE71EEF99FE00E94033 /* Collection+Random.swift in Sources */ = {isa = PBXBuildFile; fileRef = 322F5AE61EEF99FE00E94033 /* Collection+Random.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +49,7 @@
 		322F5ADD1EEF906900E94033 /* Result+Tests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Result+Tests.swift"; sourceTree = "<group>"; };
 		322F5ADF1EEF90E700E94033 /* TestCommon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestCommon.swift; sourceTree = "<group>"; };
 		322F5B401EF0959E00E94033 /* DataRepresentable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataRepresentable.swift; sourceTree = "<group>"; };
+		322F5AE61EEF99FE00E94033 /* Collection+Random.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Collection+Random.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +116,7 @@
 			isa = PBXGroup;
 			children = (
 				322F5AD81EEF8FB000E94033 /* Result */,
+				322F5AE61EEF99FE00E94033 /* Collection+Random.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -255,6 +258,7 @@
 				322F5AAE1EEF8D1000E94033 /* AppDelegate.swift in Sources */,
 				322F5AD61EEF8EED00E94033 /* NetworkRequest.swift in Sources */,
 				322F5B411EF0959E00E94033 /* DataRepresentable.swift in Sources */,
+				322F5AE71EEF99FE00E94033 /* Collection+Random.swift in Sources */,
 				322F5AD51EEF8EED00E94033 /* Network.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
