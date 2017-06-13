@@ -21,6 +21,8 @@
 		322F5AE51EEF95FA00E94033 /* MockNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 322F5AE41EEF95FA00E94033 /* MockNetwork.swift */; };
 		322F5AE71EEF99FE00E94033 /* Collection+Random.swift in Sources */ = {isa = PBXBuildFile; fileRef = 322F5AE61EEF99FE00E94033 /* Collection+Random.swift */; };
 		322F5AEB1EEFAA1100E94033 /* authentication.json in Resources */ = {isa = PBXBuildFile; fileRef = 322F5AEA1EEFAA1100E94033 /* authentication.json */; };
+		322F5AF11EEFAB4C00E94033 /* Authenticator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 322F5AEE1EEFAB4C00E94033 /* Authenticator.swift */; };
+		322F5AF21EEFAB4C00E94033 /* MockTwitterAuthenticator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 322F5AEF1EEFAB4C00E94033 /* MockTwitterAuthenticator.swift */; };
 		322F5AF51EEFABA100E94033 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 322F5AF41EEFABA100E94033 /* API.swift */; };
 		322F5AF71EEFABEC00E94033 /* APIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 322F5AF61EEFABEC00E94033 /* APIRequest.swift */; };
 		322F5AFD1EEFACCA00E94033 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 322F5AFC1EEFACCA00E94033 /* User.swift */; };
@@ -66,6 +68,8 @@
 		322F5AE41EEF95FA00E94033 /* MockNetwork.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockNetwork.swift; sourceTree = "<group>"; };
 		322F5AE61EEF99FE00E94033 /* Collection+Random.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Collection+Random.swift"; sourceTree = "<group>"; };
 		322F5AEA1EEFAA1100E94033 /* authentication.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = authentication.json; sourceTree = "<group>"; };
+		322F5AEE1EEFAB4C00E94033 /* Authenticator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Authenticator.swift; sourceTree = "<group>"; };
+		322F5AEF1EEFAB4C00E94033 /* MockTwitterAuthenticator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockTwitterAuthenticator.swift; sourceTree = "<group>"; };
 		322F5AF41EEFABA100E94033 /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		322F5AF61EEFABEC00E94033 /* APIRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIRequest.swift; sourceTree = "<group>"; };
 		322F5AFC1EEFACCA00E94033 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
@@ -157,6 +161,7 @@
 			isa = PBXGroup;
 			children = (
 				322F5AF31EEFAB7300E94033 /* API */,
+				322F5AEC1EEFAB4C00E94033 /* Authentication */,
 				322F5AD11EEF8EED00E94033 /* Network */,
 			);
 			path = Services;
@@ -191,6 +196,15 @@
 				322F5AEA1EEFAA1100E94033 /* authentication.json */,
 			);
 			path = MockNetwork;
+			sourceTree = "<group>";
+		};
+		322F5AEC1EEFAB4C00E94033 /* Authentication */ = {
+			isa = PBXGroup;
+			children = (
+				322F5AEE1EEFAB4C00E94033 /* Authenticator.swift */,
+				322F5AEF1EEFAB4C00E94033 /* MockTwitterAuthenticator.swift */,
+			);
+			path = Authentication;
 			sourceTree = "<group>";
 		};
 		322F5AF31EEFAB7300E94033 /* API */ = {
@@ -344,6 +358,7 @@
 				322F5AF51EEFABA100E94033 /* API.swift in Sources */,
 				322F5B471EF099AF00E94033 /* AuthenticationRequest.swift in Sources */,
 				322F5AE51EEF95FA00E94033 /* MockNetwork.swift in Sources */,
+				322F5AF21EEFAB4C00E94033 /* MockTwitterAuthenticator.swift in Sources */,
 				322F5AD71EEF8EED00E94033 /* NetworkResponse.swift in Sources */,
 				322F5ADA1EEF8FC000E94033 /* Result.swift in Sources */,
 				322F5AAE1EEF8D1000E94033 /* AppDelegate.swift in Sources */,
@@ -356,6 +371,7 @@
 				322F5AE71EEF99FE00E94033 /* Collection+Random.swift in Sources */,
 				322F5AD51EEF8EED00E94033 /* Network.swift in Sources */,
 				322F5AF71EEFABEC00E94033 /* APIRequest.swift in Sources */,
+				322F5AF11EEFAB4C00E94033 /* Authenticator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
