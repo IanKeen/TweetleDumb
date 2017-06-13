@@ -16,14 +16,15 @@ enum TestError: Error, Equatable {
     }
 }
 
-func XCTAssertThrows<T: Error>(error: T, when closure: () throws -> Void) {
+func XCTAssertThrows<T: Error>(file: StaticString = #file, line: UInt = #line, error: T, when closure: () throws -> Void) {
     do {
         try closure()
+        XCTFail(file: file, line: line)
 
     } catch let e as T {
-        XCTAssertEqual(String(describing: error), String(describing: e))
+        XCTAssertEqual(String(describing: error), String(describing: e), file: file, line: line)
 
     } catch {
-        XCTFail()
+        XCTFail(file: file, line: line)
     }
 }
