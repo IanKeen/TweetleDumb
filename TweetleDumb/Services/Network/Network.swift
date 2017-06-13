@@ -14,10 +14,12 @@ enum NetworkError: Error {
 
 /// Represents the network layer
 protocol Network {
+    typealias RequestComplete = (Result<NetworkResponse>) -> Void
+
     /// Perform a request
     ///
     /// - Parameters:
     ///   - request: The `NetworkRequest` to perform
     ///   - complete: The closure that is called upon completion of the network request.
-    func perform(request: NetworkRequest, complete: @escaping (Result<NetworkResponse>) -> Void)
+    func perform(request: NetworkRequest, complete: @escaping RequestComplete)
 }
