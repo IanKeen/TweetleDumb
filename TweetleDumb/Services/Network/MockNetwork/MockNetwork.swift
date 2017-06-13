@@ -23,6 +23,14 @@ extension MockNetwork {
 /// A request to `http://api.tweetledumb.com/auth` will
 /// look for a file named `auth.json` and return it as `Data`
 final class MockNetwork: Network {
+    private let delay: Double
+    private let randomErrors: Bool
+
+    init(randomErrors: Bool = true, delay: Double = 3.0) {
+        self.delay = delay
+        self.randomErrors = randomErrors
+    }
+
     // MARK: - Public Functions
     func perform(request: NetworkRequest, complete: @escaping RequestComplete) {
         do {
@@ -30,7 +38,7 @@ final class MockNetwork: Network {
 
             guard let url = urlRequest.url else { throw Error.invalidURL }
 
-            DispatchQueue.global().asyncAfter(deadline: .now() + 3.0) {
+            DispatchQueue.global().asyncAfter(deadline: .now() + delay) {
                 guard self.dontFail()
                     else { return DispatchQueue.main.async(execute: { complete(.failure(Error.random)) }) }
 
@@ -59,7 +67,7 @@ final class MockNetwork: Network {
 
     // MARK: - Private Functions
     private func dontFail() -> Bool {
-        return ((0..<10).random() ?? 0) < 7
+        return !randomErrors || ((0..<10).random() ?? 0) < 7
     }
     private func file(for url: URL) -> URL? {
         return Bundle.main.url(forResource: (url.absoluteString as NSString).lastPathComponent, withExtension: "json")
