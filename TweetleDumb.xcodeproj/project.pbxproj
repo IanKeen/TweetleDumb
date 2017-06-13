@@ -29,6 +29,9 @@
 		322F5B1A1EEFB81900E94033 /* KeyPathAccessible.swift in Sources */ = {isa = PBXBuildFile; fileRef = 322F5B161EEFB81900E94033 /* KeyPathAccessible.swift */; };
 		322F5B1B1EEFB81900E94033 /* KeyPathComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 322F5B171EEFB81900E94033 /* KeyPathComponent.swift */; };
 		322F5B411EF0959E00E94033 /* DataRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 322F5B401EF0959E00E94033 /* DataRepresentable.swift */; };
+		322F5B1D1EEFB97D00E94033 /* KeyPathAccessibleArrayTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 322F5B1C1EEFB97D00E94033 /* KeyPathAccessibleArrayTests.swift */; };
+		322F5B1F1EEFC1AF00E94033 /* KeyPathAccessibleDictionaryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 322F5B1E1EEFC1AF00E94033 /* KeyPathAccessibleDictionaryTests.swift */; };
+		322F5B211EEFC48F00E94033 /* KeyPathAccessibleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 322F5B201EEFC48F00E94033 /* KeyPathAccessibleTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,6 +71,9 @@
 		322F5B161EEFB81900E94033 /* KeyPathAccessible.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyPathAccessible.swift; sourceTree = "<group>"; };
 		322F5B171EEFB81900E94033 /* KeyPathComponent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyPathComponent.swift; sourceTree = "<group>"; };
 		322F5B401EF0959E00E94033 /* DataRepresentable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataRepresentable.swift; sourceTree = "<group>"; };
+		322F5B1C1EEFB97D00E94033 /* KeyPathAccessibleArrayTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyPathAccessibleArrayTests.swift; sourceTree = "<group>"; };
+		322F5B1E1EEFC1AF00E94033 /* KeyPathAccessibleDictionaryTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyPathAccessibleDictionaryTests.swift; sourceTree = "<group>"; };
+		322F5B201EEFC48F00E94033 /* KeyPathAccessibleTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyPathAccessibleTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -193,8 +199,11 @@
 			isa = PBXGroup;
 			children = (
 				322F5B141EEFB81900E94033 /* KeyPathAccessible+Array.swift */,
+				322F5B1C1EEFB97D00E94033 /* KeyPathAccessibleArrayTests.swift */,
 				322F5B151EEFB81900E94033 /* KeyPathAccessible+Dictionary.swift */,
+				322F5B1E1EEFC1AF00E94033 /* KeyPathAccessibleDictionaryTests.swift */,
 				322F5B161EEFB81900E94033 /* KeyPathAccessible.swift */,
+				322F5B201EEFC48F00E94033 /* KeyPathAccessibleTests.swift */,
 				322F5B171EEFB81900E94033 /* KeyPathComponent.swift */,
 			);
 			path = KeyPathAccessible;
@@ -327,9 +336,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				322F5B021EEFB35E00E94033 /* NetworkResponseTests.swift in Sources */,
+				322F5B1F1EEFC1AF00E94033 /* KeyPathAccessibleDictionaryTests.swift in Sources */,
 				322F5AE01EEF90E700E94033 /* TestCommon.swift in Sources */,
+				322F5B1D1EEFB97D00E94033 /* KeyPathAccessibleArrayTests.swift in Sources */,
 				322F5ADC1EEF8FDC00E94033 /* ResultTests.swift in Sources */,
 				322F5ADE1EEF906900E94033 /* Result+Tests.swift in Sources */,
+				322F5B211EEFC48F00E94033 /* KeyPathAccessibleTests.swift in Sources */,
 				322F5AC31EEF8D1000E94033 /* TweetleDumbTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
