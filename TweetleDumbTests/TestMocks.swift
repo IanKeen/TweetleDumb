@@ -9,19 +9,19 @@
 import XCTest
 @testable import TweetleDumb
 
-func api() -> API {
+func mockApi() -> API {
     return API(
         network: MockNetwork(randomErrors: false, delay: 0),
         baseURL: URL(string: "https://api.tweetledumb.com")!,
-        authenticationState: authenticationState()
+        authenticationState: mockAuthenticationState()
     )
 }
 
-func authenticationState(_ storage: KeyValueStore = authenticationStorage()) -> AuthenticationState {
+func mockAuthenticationState(_ storage: KeyValueStore = mockAuthenticationStorage()) -> AuthenticationState {
     return AuthenticationState(storage: storage)
 }
 
-func authenticationStorage() -> KeyValueStore {
+func mockAuthenticationStorage() -> KeyValueStore {
     return NSMutableDictionary(dictionary: [
         AuthenticationController.StorageKey.authentication:
             Authentication(
@@ -33,6 +33,14 @@ func authenticationStorage() -> KeyValueStore {
                 )
             ).makeDictionary()
         ]
+    )
+}
+
+func mockAuthenticationController() -> AuthenticationController {
+    return AuthenticationController(
+        api: mockApi(),
+        authenticationState: mockAuthenticationState(),
+        authenticators: [MockTwitterAuthenticator()]
     )
 }
 

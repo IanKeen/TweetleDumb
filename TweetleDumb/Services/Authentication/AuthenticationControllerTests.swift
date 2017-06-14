@@ -45,8 +45,8 @@ class AuthenticationControllerTests: XCTestCase {
             onLogout: { exp.fulfill() }
         )
         let controller = AuthenticationController(
-            api: api(),
-            authenticationState: authenticationState(NSMutableDictionary()),
+            api: mockApi(),
+            authenticationState: mockAuthenticationState(NSMutableDictionary()),
             authenticators: []
         )
         controller.delegates.add(delegate)
@@ -63,8 +63,8 @@ class AuthenticationControllerTests: XCTestCase {
             onLogout: { XCTFail() }
         )
         let controller = AuthenticationController(
-            api: api(),
-            authenticationState: authenticationState(),
+            api: mockApi(),
+            authenticationState: mockAuthenticationState(),
             authenticators: []
         )
         controller.delegates.add(delegate)
@@ -82,8 +82,8 @@ class AuthenticationControllerTests: XCTestCase {
             onLogout: { XCTFail() }
         )
         let controller = AuthenticationController(
-            api: api(),
-            authenticationState: authenticationState(NSMutableDictionary()),
+            api: mockApi(),
+            authenticationState: mockAuthenticationState(NSMutableDictionary()),
             authenticators: []
         )
         controller.delegates.add(delegate)
@@ -100,8 +100,8 @@ class AuthenticationControllerTests: XCTestCase {
             onLogout: { XCTFail() }
         )
         let controller = AuthenticationController(
-            api: api(),
-            authenticationState: authenticationState(),
+            api: mockApi(),
+            authenticationState: mockAuthenticationState(),
             authenticators: []
         )
         controller.delegates.add(delegate)
@@ -118,8 +118,8 @@ class AuthenticationControllerTests: XCTestCase {
             onLogout: { XCTFail() }
         )
         let controller = AuthenticationController(
-            api: api(),
-            authenticationState: authenticationState(NSMutableDictionary()),
+            api: mockApi(),
+            authenticationState: mockAuthenticationState(NSMutableDictionary()),
             authenticators: []
         )
         controller.delegates.add(delegate)
@@ -137,8 +137,8 @@ class AuthenticationControllerTests: XCTestCase {
             onLogout: { XCTFail() }
         )
         let controller = AuthenticationController(
-            api: api(),
-            authenticationState: authenticationState(NSMutableDictionary()),
+            api: mockApi(),
+            authenticationState: mockAuthenticationState(NSMutableDictionary()),
             authenticators: [MockTwitterAuthenticator()]
         )
         controller.delegates.add(delegate)
@@ -155,8 +155,8 @@ class AuthenticationControllerTests: XCTestCase {
             onLogout: { exp.fulfill() }
         )
         let controller = AuthenticationController(
-            api: api(),
-            authenticationState: authenticationState(),
+            api: mockApi(),
+            authenticationState: mockAuthenticationState(),
             authenticators: [MockTwitterAuthenticator()]
         )
         controller.delegates.add(delegate)
@@ -176,8 +176,8 @@ class AuthenticationControllerTests: XCTestCase {
             onLogout: { XCTFail() }
         )
         let controller = AuthenticationController(
-            api: api(),
-            authenticationState: authenticationState(storage),
+            api: mockApi(),
+            authenticationState: mockAuthenticationState(storage),
             authenticators: [MockTwitterAuthenticator()]
         )
         controller.delegates.add(delegate)
