@@ -6,12 +6,14 @@
 //  Copyright © 2017 Mustard. All rights reserved.
 //
 
-enum KeyPathError: Error, CustomStringConvertible {
+import Foundation
+
+enum KeyPathError: LocalizedError {
     case invalid(key: [KeyPathComponent])
     case missing(key: [KeyPathComponent])
     case mismatch(key: [KeyPathComponent], expected: Any.Type, found: Any.Type)
 
-    var description: String {
+    var errorDescription: String? {
         switch self {
         case .invalid(let keyPath):
             return "Invalid keyPath provided: '\(keyPath)'"
