@@ -1,5 +1,5 @@
 # TweetleDumb
-Mock Twitter client
+Mock (dumb) Twitter client
 
 ## Though Process
 Even though this is a mock client I wanted to approach it with the mindset that the mock components (network/auth) could be swapped out for their 'real' counterparts and the app would essentially 'just work'™. The core components and view models have included tests.
@@ -15,7 +15,7 @@ The application takes advantage of a variety of techniques including:
 - **Dependency Injection**: provides explicit references. When we enforce that all dependencies are injected it becomes easy to reason about the dependency graph in our application. It act as documentation and allow us to very quickly recognise when functionality should be refactored into a separate component.
 - **Delegate**: I chose delegates as a pub/sub system instead of something like Rx simply to be pragmatic, I haven't used Rx heavily since version 2. I have included a simple `MulticastDelegate` to support multiple observers where required. This system still allows communication between obejcts to be explicit.
 - **Result\<T>**: provides unified success/failure type. The result type is a fantastic choice for async callbacks and far better than either separate success/failure callbacks or a single with 2 optional values. It provides all of the benefits of a single callback, allowing for actions to be performed regardless of result. It also removes the issues with a single callback using 2 optionals by reducing the possible states to _only_ success and failure.
-- **TableViewCellRepresentable**: This is a responsibility inversion pattern I developed and use frequently to remove almost all table view boilerplate from view controllers. It also allows view controllers to scale to any number of different cell types without any change to the datasource code.
+- **TableViewCellRepresentable**: This is a responsibility inversion pattern I developed and use frequently to remove almost all table view boilerplate from view controllers. It also allows view controllers to scale to any number of different cell types without any change to the datasource code. [Original article](https://medium.com/@IanKeen/separation-of-concerns-ui-edition-1916a35a6899)
 - **KeyPathAccessible**: Provides type safe deserialization of dictionary and arrays. This is a lite wrapper that gives meanigful errors when the value cannot be extracted (similar to the recent `Codable` tools in swift 4)
 
 ## Service Layer
