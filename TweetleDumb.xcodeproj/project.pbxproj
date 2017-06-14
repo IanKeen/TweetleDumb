@@ -67,6 +67,7 @@
 		32AC67FA1EF10DA90067DCC1 /* TweetCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32AC67F91EF10DA90067DCC1 /* TweetCellViewModel.swift */; };
 		32AC68051EF11E7B0067DCC1 /* compose.json in Resources */ = {isa = PBXBuildFile; fileRef = 32AC68041EF11E7B0067DCC1 /* compose.json */; };
 		32AC68071EF11E910067DCC1 /* ComposeRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32AC68061EF11E910067DCC1 /* ComposeRequest.swift */; };
+		32AC680B1EF1321C0067DCC1 /* KeyboardObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32AC680A1EF1321C0067DCC1 /* KeyboardObserver.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -144,6 +145,7 @@
 		32AC67F91EF10DA90067DCC1 /* TweetCellViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TweetCellViewModel.swift; sourceTree = "<group>"; };
 		32AC68041EF11E7B0067DCC1 /* compose.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = compose.json; sourceTree = "<group>"; };
 		32AC68061EF11E910067DCC1 /* ComposeRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ComposeRequest.swift; sourceTree = "<group>"; };
+		32AC680A1EF1321C0067DCC1 /* KeyboardObserver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyboardObserver.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -219,6 +221,7 @@
 				322F5B5F1EF0C72100E94033 /* UIView+Constraints.swift */,
 				322F5B611EF0E0CF00E94033 /* MulticastDelegate.swift */,
 				32AC67F41EF108540067DCC1 /* Date+Tweet.swift */,
+				32AC680A1EF1321C0067DCC1 /* KeyboardObserver.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -529,6 +532,7 @@
 				322F5B761EF0F17A00E94033 /* TableViewCellViewModel.swift in Sources */,
 				322F5B4A1EF0A65900E94033 /* ApplicationController.swift in Sources */,
 				322F5B691EF0EF6E00E94033 /* TweetsViewController.swift in Sources */,
+				32AC680B1EF1321C0067DCC1 /* KeyboardObserver.swift in Sources */,
 				322F5B4C1EF0A66A00E94033 /* Environment.swift in Sources */,
 				322F5AD61EEF8EED00E94033 /* NetworkRequest.swift in Sources */,
 				322F5B791EF0F39300E94033 /* TweetsRequest.swift in Sources */,
