@@ -8,14 +8,6 @@
 
 import Foundation
 
-extension MockNetwork {
-    enum Error: Swift.Error {
-        case invalidURL
-        case random
-        case fileSource
-    }
-}
-
 /// Mock Network will attempt to return a json file 
 /// whose filename matches the last component of the request
 /// appending `.json` - so:
@@ -67,7 +59,7 @@ final class MockNetwork: Network {
 
     // MARK: - Private Functions
     private func dontFail() -> Bool {
-        return !randomErrors || ((0..<10).random() ?? 0) < 7
+        return !randomErrors || ((0..<10).random() ?? 0) < 5
     }
     private func file(for url: URL) -> URL? {
         return Bundle.main.url(forResource: (url.absoluteString as NSString).lastPathComponent, withExtension: "json")
