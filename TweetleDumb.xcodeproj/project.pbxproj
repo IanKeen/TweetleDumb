@@ -73,6 +73,7 @@
 		32AC68091EF122CC0067DCC1 /* ComposeViewModel+Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32AC68081EF122CC0067DCC1 /* ComposeViewModel+Error.swift */; };
 		32AC680B1EF1321C0067DCC1 /* KeyboardObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32AC680A1EF1321C0067DCC1 /* KeyboardObserver.swift */; };
 		32AC680D1EF1AD530067DCC1 /* AuthenticationState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32AC680C1EF1AD530067DCC1 /* AuthenticationState.swift */; };
+		32AC68111EF1C08F0067DCC1 /* TweetsViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32AC68101EF1C08F0067DCC1 /* TweetsViewModelTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -156,6 +157,7 @@
 		32AC68081EF122CC0067DCC1 /* ComposeViewModel+Error.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ComposeViewModel+Error.swift"; sourceTree = "<group>"; };
 		32AC680A1EF1321C0067DCC1 /* KeyboardObserver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyboardObserver.swift; sourceTree = "<group>"; };
 		32AC680C1EF1AD530067DCC1 /* AuthenticationState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthenticationState.swift; sourceTree = "<group>"; };
+		32AC68101EF1C08F0067DCC1 /* TweetsViewModelTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TweetsViewModelTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -385,6 +387,7 @@
 				322F5B6A1EF0EF7A00E94033 /* TweetsView.swift */,
 				322F5B681EF0EF6E00E94033 /* TweetsViewController.swift */,
 				322F5B6C1EF0EF8600E94033 /* TweetsViewModel.swift */,
+				32AC68101EF1C08F0067DCC1 /* TweetsViewModelTests.swift */,
 			);
 			path = Tweets;
 			sourceTree = "<group>";
@@ -590,6 +593,7 @@
 				322F5B521EF0AF2600E94033 /* TestMocks.swift in Sources */,
 				322F5B021EEFB35E00E94033 /* NetworkResponseTests.swift in Sources */,
 				322F5B1F1EEFC1AF00E94033 /* KeyPathAccessibleDictionaryTests.swift in Sources */,
+				32AC68111EF1C08F0067DCC1 /* TweetsViewModelTests.swift in Sources */,
 				322F5AE01EEF90E700E94033 /* TestCommon.swift in Sources */,
 				322F5B1D1EEFB97D00E94033 /* KeyPathAccessibleArrayTests.swift in Sources */,
 				322F5ADC1EEF8FDC00E94033 /* ResultTests.swift in Sources */,

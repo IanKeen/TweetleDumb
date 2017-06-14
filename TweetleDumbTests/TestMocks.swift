@@ -36,10 +36,10 @@ func mockAuthenticationStorage() -> KeyValueStore {
     )
 }
 
-func mockAuthenticationController() -> AuthenticationController {
+func mockAuthenticationController(_ state: AuthenticationState = mockAuthenticationState()) -> AuthenticationController {
     return AuthenticationController(
         api: mockApi(),
-        authenticationState: mockAuthenticationState(),
+        authenticationState: state,
         authenticators: [MockTwitterAuthenticator()]
     )
 }
