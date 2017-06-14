@@ -52,6 +52,9 @@
 		322F5B621EF0E0CF00E94033 /* MulticastDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 322F5B611EF0E0CF00E94033 /* MulticastDelegate.swift */; };
 		322F5B641EF0EA1A00E94033 /* AuthenticationController+Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = 322F5B631EF0EA1A00E94033 /* AuthenticationController+Error.swift */; };
 		322F5B661EF0EBE300E94033 /* MockNetwork+Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = 322F5B651EF0EBE300E94033 /* MockNetwork+Error.swift */; };
+		322F5B691EF0EF6E00E94033 /* TweetsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 322F5B681EF0EF6E00E94033 /* TweetsViewController.swift */; };
+		322F5B6B1EF0EF7A00E94033 /* TweetsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 322F5B6A1EF0EF7A00E94033 /* TweetsView.swift */; };
+		322F5B6D1EF0EF8600E94033 /* TweetsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 322F5B6C1EF0EF8600E94033 /* TweetsViewModel.swift */; };
 		322F5B741EF0F17A00E94033 /* Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 322F5B701EF0F17A00E94033 /* Reusable.swift */; };
 		322F5B751EF0F17A00E94033 /* TableViewCellRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 322F5B711EF0F17A00E94033 /* TableViewCellRepresentable.swift */; };
 		322F5B761EF0F17A00E94033 /* TableViewCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 322F5B721EF0F17A00E94033 /* TableViewCellViewModel.swift */; };
@@ -122,6 +125,9 @@
 		322F5B611EF0E0CF00E94033 /* MulticastDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MulticastDelegate.swift; sourceTree = "<group>"; };
 		322F5B631EF0EA1A00E94033 /* AuthenticationController+Error.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AuthenticationController+Error.swift"; sourceTree = "<group>"; };
 		322F5B651EF0EBE300E94033 /* MockNetwork+Error.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "MockNetwork+Error.swift"; sourceTree = "<group>"; };
+		322F5B681EF0EF6E00E94033 /* TweetsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TweetsViewController.swift; sourceTree = "<group>"; };
+		322F5B6A1EF0EF7A00E94033 /* TweetsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TweetsView.swift; sourceTree = "<group>"; };
+		322F5B6C1EF0EF8600E94033 /* TweetsViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TweetsViewModel.swift; sourceTree = "<group>"; };
 		322F5B701EF0F17A00E94033 /* Reusable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reusable.swift; sourceTree = "<group>"; };
 		322F5B711EF0F17A00E94033 /* TableViewCellRepresentable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewCellRepresentable.swift; sourceTree = "<group>"; };
 		322F5B721EF0F17A00E94033 /* TableViewCellViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewCellViewModel.swift; sourceTree = "<group>"; };
@@ -331,6 +337,7 @@
 			isa = PBXGroup;
 			children = (
 				322F5B541EF0B9EE00E94033 /* Login */,
+				322F5B671EF0EF5F00E94033 /* Tweets */,
 				322F5B5B1EF0BA4700E94033 /* CustomViewController.swift */,
 			);
 			path = ViewControllers;
@@ -344,6 +351,16 @@
 				322F5B591EF0BA3600E94033 /* LoginViewModel.swift */,
 			);
 			path = Login;
+			sourceTree = "<group>";
+		};
+		322F5B671EF0EF5F00E94033 /* Tweets */ = {
+			isa = PBXGroup;
+			children = (
+				322F5B6A1EF0EF7A00E94033 /* TweetsView.swift */,
+				322F5B681EF0EF6E00E94033 /* TweetsViewController.swift */,
+				322F5B6C1EF0EF8600E94033 /* TweetsViewModel.swift */,
+			);
+			path = Tweets;
 			sourceTree = "<group>";
 		};
 		322F5B6F1EF0F15C00E94033 /* TableViewCellRepresentable */ = {
@@ -487,11 +504,13 @@
 				322F5B561EF0BA2500E94033 /* LoginViewController.swift in Sources */,
 				322F5B761EF0F17A00E94033 /* TableViewCellViewModel.swift in Sources */,
 				322F5B4A1EF0A65900E94033 /* ApplicationController.swift in Sources */,
+				322F5B691EF0EF6E00E94033 /* TweetsViewController.swift in Sources */,
 				322F5B4C1EF0A66A00E94033 /* Environment.swift in Sources */,
 				322F5AD61EEF8EED00E94033 /* NetworkRequest.swift in Sources */,
 				322F5B791EF0F39300E94033 /* TweetsRequest.swift in Sources */,
 				322F5B411EF0959E00E94033 /* DataRepresentable.swift in Sources */,
 				322F5B771EF0F17A00E94033 /* ViewModelConfigurable.swift in Sources */,
+				322F5B6D1EF0EF8600E94033 /* TweetsViewModel.swift in Sources */,
 				322F5B291EEFD1EB00E94033 /* AuthenticationController.swift in Sources */,
 				322F5B641EF0EA1A00E94033 /* AuthenticationController+Error.swift in Sources */,
 				322F5B2C1EF06D4B00E94033 /* KeyValueStore.swift in Sources */,
@@ -503,6 +522,7 @@
 				32AC67F51EF108540067DCC1 /* Date+Tweet.swift in Sources */,
 				322F5AF71EEFABEC00E94033 /* APIRequest.swift in Sources */,
 				322F5AF11EEFAB4C00E94033 /* Authenticator.swift in Sources */,
+				322F5B6B1EF0EF7A00E94033 /* TweetsView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
