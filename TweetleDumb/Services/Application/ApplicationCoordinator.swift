@@ -1,5 +1,5 @@
 //
-//  ApplicationController.swift
+//  ApplicationCoordinator.swift
 //  TweetleDumb
 //
 //  Created by Ian Keen on 2017-06-13.
@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-final class ApplicationController {
+final class ApplicationCoordinator {
     // MARK: - Private Properties
     private let environment: Environment
     fileprivate let navigationController: UINavigationController
@@ -45,7 +45,7 @@ final class ApplicationController {
 }
 
 // MARK: - Error Handling
-private extension ApplicationController {
+private extension ApplicationCoordinator {
     func handle(error: Error) {
         let alert = UIAlertController(
             title: "Error",
@@ -64,7 +64,7 @@ private extension ApplicationController {
 }
 
 // MARK: - Routing
-private extension ApplicationController {
+private extension ApplicationCoordinator {
     func showLogin() {
         let viewModel = LoginViewModel(dependencies: self)
         let viewController = LoginViewController(viewModel: viewModel)
@@ -101,7 +101,7 @@ private extension ApplicationController {
 }
 
 // MARK: - TweetsViewModelDelegate
-extension ApplicationController: TweetsViewModelDelegate {
+extension ApplicationCoordinator: TweetsViewModelDelegate {
     func tweetsViewModelUpdated(_ viewModel: TweetsViewModel) { }
     func tweetsViewModel(_ viewModel: TweetsViewModel, error: Error) {
         handle(error: error)
@@ -112,7 +112,7 @@ extension ApplicationController: TweetsViewModelDelegate {
 }
 
 // MARK: - ComposeViewModelDelegate
-extension ApplicationController: ComposeViewModelDelegate {
+extension ApplicationCoordinator: ComposeViewModelDelegate {
     private func endCompose(_ viewModel: ComposeViewModel) {
         composeContainer?.dismiss(animated: true, completion: nil)
         viewModel.delegate.removeAll()
@@ -129,7 +129,7 @@ extension ApplicationController: ComposeViewModelDelegate {
 }
 
 // MARK: - AuthenticationControllerDelegate
-extension ApplicationController: AuthenticationControllerDelegate {
+extension ApplicationCoordinator: AuthenticationControllerDelegate {
     func authenticationError(controller: AuthenticationController, error: Error) {
         handle(error: error)
     }

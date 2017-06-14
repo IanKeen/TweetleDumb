@@ -11,13 +11,13 @@ import UIKit
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
-    var applicationController: ApplicationController!
+    var applicationCoordinator: ApplicationCoordinator!
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
 
         let navigationController = UINavigationController()
 
-        applicationController = ApplicationController(
+        applicationCoordinator = ApplicationCoordinator(
             environment: Environment(
                 baseURL: URL(string: "https://api.tweetledumb.com")!,
                 keyValueStore: UserDefaults.standard,
@@ -33,7 +33,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window.rootViewController = navigationController
         self.window = window
 
-        applicationController.start()
+        applicationCoordinator.start()
 
         window.makeKeyAndVisible()
         return true

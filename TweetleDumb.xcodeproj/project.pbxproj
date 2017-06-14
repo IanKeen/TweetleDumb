@@ -38,7 +38,7 @@
 		322F5B2C1EF06D4B00E94033 /* KeyValueStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 322F5B2B1EF06D4B00E94033 /* KeyValueStore.swift */; };
 		322F5B411EF0959E00E94033 /* DataRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 322F5B401EF0959E00E94033 /* DataRepresentable.swift */; };
 		322F5B471EF099AF00E94033 /* AuthenticationRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 322F5B461EF099AF00E94033 /* AuthenticationRequest.swift */; };
-		322F5B4A1EF0A65900E94033 /* ApplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 322F5B491EF0A65900E94033 /* ApplicationController.swift */; };
+		322F5B4A1EF0A65900E94033 /* ApplicationCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 322F5B491EF0A65900E94033 /* ApplicationCoordinator.swift */; };
 		322F5B4C1EF0A66A00E94033 /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 322F5B4B1EF0A66A00E94033 /* Environment.swift */; };
 		322F5B4E1EF0A68000E94033 /* Dependencies.swift in Sources */ = {isa = PBXBuildFile; fileRef = 322F5B4D1EF0A68000E94033 /* Dependencies.swift */; };
 		322F5B501EF0A84E00E94033 /* AuthenticationControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 322F5B4F1EF0A84E00E94033 /* AuthenticationControllerTests.swift */; };
@@ -123,7 +123,7 @@
 		322F5B2B1EF06D4B00E94033 /* KeyValueStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyValueStore.swift; sourceTree = "<group>"; };
 		322F5B401EF0959E00E94033 /* DataRepresentable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataRepresentable.swift; sourceTree = "<group>"; };
 		322F5B461EF099AF00E94033 /* AuthenticationRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthenticationRequest.swift; sourceTree = "<group>"; };
-		322F5B491EF0A65900E94033 /* ApplicationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApplicationController.swift; sourceTree = "<group>"; };
+		322F5B491EF0A65900E94033 /* ApplicationCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApplicationCoordinator.swift; sourceTree = "<group>"; };
 		322F5B4B1EF0A66A00E94033 /* Environment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Environment.swift; sourceTree = "<group>"; };
 		322F5B4D1EF0A68000E94033 /* Dependencies.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Dependencies.swift; sourceTree = "<group>"; };
 		322F5B4F1EF0A84E00E94033 /* AuthenticationControllerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthenticationControllerTests.swift; sourceTree = "<group>"; };
@@ -356,7 +356,7 @@
 			children = (
 				322F5B4B1EF0A66A00E94033 /* Environment.swift */,
 				322F5B4D1EF0A68000E94033 /* Dependencies.swift */,
-				322F5B491EF0A65900E94033 /* ApplicationController.swift */,
+				322F5B491EF0A65900E94033 /* ApplicationCoordinator.swift */,
 			);
 			path = Application;
 			sourceTree = "<group>";
@@ -562,7 +562,7 @@
 				322F5B5C1EF0BA4700E94033 /* CustomViewController.swift in Sources */,
 				322F5B561EF0BA2500E94033 /* LoginViewController.swift in Sources */,
 				322F5B761EF0F17A00E94033 /* TableViewCellViewModel.swift in Sources */,
-				322F5B4A1EF0A65900E94033 /* ApplicationController.swift in Sources */,
+				322F5B4A1EF0A65900E94033 /* ApplicationCoordinator.swift in Sources */,
 				322F5B691EF0EF6E00E94033 /* TweetsViewController.swift in Sources */,
 				32AC67FF1EF11CB90067DCC1 /* ComposeViewController.swift in Sources */,
 				32AC680B1EF1321C0067DCC1 /* KeyboardObserver.swift in Sources */,

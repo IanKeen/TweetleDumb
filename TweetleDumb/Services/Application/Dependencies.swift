@@ -24,7 +24,7 @@ protocol HasAPI {
     var api: API { get }
 }
 
-extension ApplicationController: HasAuthenticationController { }
-extension ApplicationController: HasAuthenticationState { }
-extension ApplicationController: HasReadOnlyAuthenticationState { }
-extension ApplicationController: HasAPI { }
+extension ApplicationCoordinator: HasAuthenticationController { }
+extension ApplicationCoordinator: HasAuthenticationState { }
+extension ApplicationCoordinator: HasReadOnlyAuthenticationState { }
+extension ApplicationCoordinator: HasAPI { }
