@@ -13,6 +13,7 @@ final class ApplicationController {
     // MARK: - Private Properties
     private let environment: Environment
     fileprivate let navigationController: UINavigationController
+    fileprivate var composeContainer: UINavigationController?
 
     // MARK: - Public Properties
     private(set) lazy var authenticationController: AuthenticationController = AuthenticationController(
@@ -51,7 +52,9 @@ private extension ApplicationController {
             style: .default,
             handler: nil
         ))
-        navigationController.present(alert, animated: true, completion: nil)
+
+        let target = navigationController.visibleViewController ?? navigationController
+        target.present(alert, animated: true, completion: nil)
     }
 }
 
@@ -74,25 +77,49 @@ private extension ApplicationController {
     func showTweets() {
         let viewModel = TweetsViewModel(dependencies: self)
         viewModel.delegate.add(self)
+        
         let viewController = TweetsViewController(viewModel: viewModel)
         navigationController.setViewControllers([viewController], animated: navigationController.shouldAnimate)
         navigationController.setNavigationBarHidden(false, animated: navigationController.shouldAnimate)
     }
     func showCompose(target: TweetsViewModel) {
-        print("Compose Tweet")
+        let viewModel = ComposeViewModel(dependencies: self)
+        viewModel.delegate.add(target)
+        viewModel.delegate.add(self)
+
+        let viewController = ComposeViewController(viewModel: viewModel)
+
+        let container = UINavigationController(rootViewController: viewController)
+        composeContainer = container
+        navigationController.present(container, animated: true, completion: nil)
     }
 }
 
 // MARK: - TweetsViewModelDelegate
 extension ApplicationController: TweetsViewModelDelegate {
-    func tweetsViewModelUpdated(_ viewModel: TweetsViewModel) {
-        //
-    }
+    func tweetsViewModelUpdated(_ viewModel: TweetsViewModel) { }
     func tweetsViewModel(_ viewModel: TweetsViewModel, error: Error) {
         handle(error: error)
     }
     func tweetsViewModelCompose(_ viewModel: TweetsViewModel) {
         showCompose(target: viewModel)
+    }
+}
+
+// MARK: - ComposeViewModelDelegate
+extension ApplicationController: ComposeViewModelDelegate {
+    private func endCompose(_ viewModel: ComposeViewModel) {
+        composeContainer?.dismiss(animated: true, completion: nil)
+        viewModel.delegate.removeAll()
+    }
+    func composeViewModel(_ viewModel: ComposeViewModel, newTweet: Tweet) {
+        endCompose(viewModel)
+    }
+    func composeViewModel(_ viewModel: ComposeViewModel, error: Error) {
+        handle(error: error)
+    }
+    func composeViewModelCancel(_ viewModel: ComposeViewModel) {
+        endCompose(viewModel)
     }
 }
 
