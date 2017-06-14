@@ -43,6 +43,9 @@
 		322F5B4E1EF0A68000E94033 /* Dependencies.swift in Sources */ = {isa = PBXBuildFile; fileRef = 322F5B4D1EF0A68000E94033 /* Dependencies.swift */; };
 		322F5B501EF0A84E00E94033 /* AuthenticationControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 322F5B4F1EF0A84E00E94033 /* AuthenticationControllerTests.swift */; };
 		322F5B521EF0AF2600E94033 /* TestMocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 322F5B511EF0AF2600E94033 /* TestMocks.swift */; };
+		322F5B561EF0BA2500E94033 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 322F5B551EF0BA2500E94033 /* LoginViewController.swift */; };
+		322F5B581EF0BA2D00E94033 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 322F5B571EF0BA2D00E94033 /* LoginView.swift */; };
+		322F5B5A1EF0BA3600E94033 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 322F5B591EF0BA3600E94033 /* LoginViewModel.swift */; };
 		322F5B5C1EF0BA4700E94033 /* CustomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 322F5B5B1EF0BA4700E94033 /* CustomViewController.swift */; };
 		322F5B5E1EF0C49D00E94033 /* UINavigationController+ShouldAnimate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 322F5B5D1EF0C49D00E94033 /* UINavigationController+ShouldAnimate.swift */; };
 		322F5B601EF0C72100E94033 /* UIView+Constraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 322F5B5F1EF0C72100E94033 /* UIView+Constraints.swift */; };
@@ -102,6 +105,9 @@
 		322F5B4D1EF0A68000E94033 /* Dependencies.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Dependencies.swift; sourceTree = "<group>"; };
 		322F5B4F1EF0A84E00E94033 /* AuthenticationControllerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthenticationControllerTests.swift; sourceTree = "<group>"; };
 		322F5B511EF0AF2600E94033 /* TestMocks.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestMocks.swift; sourceTree = "<group>"; };
+		322F5B551EF0BA2500E94033 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		322F5B571EF0BA2D00E94033 /* LoginView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		322F5B591EF0BA3600E94033 /* LoginViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		322F5B5B1EF0BA4700E94033 /* CustomViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomViewController.swift; sourceTree = "<group>"; };
 		322F5B5D1EF0C49D00E94033 /* UINavigationController+ShouldAnimate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UINavigationController+ShouldAnimate.swift"; sourceTree = "<group>"; };
 		322F5B5F1EF0C72100E94033 /* UIView+Constraints.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Constraints.swift"; sourceTree = "<group>"; };
@@ -309,6 +315,16 @@
 			path = ViewControllers;
 			sourceTree = "<group>";
 		};
+		322F5B541EF0B9EE00E94033 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				322F5B571EF0BA2D00E94033 /* LoginView.swift */,
+				322F5B551EF0BA2500E94033 /* LoginViewController.swift */,
+				322F5B591EF0BA3600E94033 /* LoginViewModel.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -422,14 +438,17 @@
 				322F5AF21EEFAB4C00E94033 /* MockTwitterAuthenticator.swift in Sources */,
 				322F5AD71EEF8EED00E94033 /* NetworkResponse.swift in Sources */,
 				322F5ADA1EEF8FC000E94033 /* Result.swift in Sources */,
+				322F5B5A1EF0BA3600E94033 /* LoginViewModel.swift in Sources */,
 				322F5AAE1EEF8D1000E94033 /* AppDelegate.swift in Sources */,
 				322F5B1A1EEFB81900E94033 /* KeyPathAccessible.swift in Sources */,
+				322F5B581EF0BA2D00E94033 /* LoginView.swift in Sources */,
 				322F5B5E1EF0C49D00E94033 /* UINavigationController+ShouldAnimate.swift in Sources */,
 				322F5B621EF0E0CF00E94033 /* MulticastDelegate.swift in Sources */,
 				322F5AFD1EEFACCA00E94033 /* User.swift in Sources */,
 				322F5B271EEFD0C300E94033 /* Authentication.swift in Sources */,
 				322F5B4E1EF0A68000E94033 /* Dependencies.swift in Sources */,
 				322F5B5C1EF0BA4700E94033 /* CustomViewController.swift in Sources */,
+				322F5B561EF0BA2500E94033 /* LoginViewController.swift in Sources */,
 				322F5B4A1EF0A65900E94033 /* ApplicationController.swift in Sources */,
 				322F5B4C1EF0A66A00E94033 /* Environment.swift in Sources */,
 				322F5AD61EEF8EED00E94033 /* NetworkRequest.swift in Sources */,
