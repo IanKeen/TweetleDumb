@@ -18,7 +18,6 @@ final class ApplicationController {
     private(set) lazy var authenticationController: AuthenticationController = AuthenticationController(
         api: self.api,
         storage: self.environment.keyValueStore,
-        delegate: self,
         authenticators: self.environment.authenticators
     )
     private(set) lazy var api: API = API(
@@ -34,6 +33,7 @@ final class ApplicationController {
 
     // MARK: - Public
     func start() {
+        authenticationController.delegates.add(self)
         authenticationController.notifyDelegate()
     }
 }

@@ -35,19 +35,19 @@ final class AuthenticationController {
     private let api: API
     private let storage: KeyValueStore
     private let authenticators: [Authenticator]
-    private let delegate: AuthenticationControllerDelegate
 
     // MARK: - Public Properties
+    let delegates = MulticastDelegate<AuthenticationControllerDelegate>()
     private(set) var authentication: Authentication? {
         didSet {
             switch (oldValue, authentication) {
             case (.some, .none): // logged in > logout
                 authenticators.forEach { $0.logout() }
-                delegate.authenticationLogout(controller: self)
+                delegates.notify { $0.authenticationLogout(controller: self) }
 
             case (.none, .some(let auth)): // logged out > login
                 store(authentication: auth)
-                delegate.authenticationLogin(controller: self, authentication: auth)
+                delegates.notify { $0.authenticationLogin(controller: self, authentication: auth) }
 
             default:
                 // invalid transition's are:
@@ -59,11 +59,10 @@ final class AuthenticationController {
     }
 
     // MARK: - Lifecycle
-    init(api: API, storage: KeyValueStore, delegate: AuthenticationControllerDelegate, authenticators: [Authenticator]) {
+    init(api: API, storage: KeyValueStore, authenticators: [Authenticator]) {
         self.api = api
         self.storage = storage
         self.authenticators = authenticators
-        self.delegate = delegate
 
         // we assign a value here so we don't trigger the property observer
         authentication = storedAuthentication()
@@ -72,8 +71,11 @@ final class AuthenticationController {
     // MARK: - Public Functions
     func notifyDelegate() {
         switch authentication {
-        case .none: delegate.authenticationLogout(controller: self)
-        case .some(let auth): delegate.authenticationLogin(controller: self, authentication: auth)
+        case .none:
+            delegates.notify { $0.authenticationLogout(controller: self) }
+
+        case .some(let auth):
+            delegates.notify { $0.authenticationLogin(controller: self, authentication: auth) }
         }
     }
     func login<T: Authenticator>(using authenticator: T.Type) {
@@ -136,6 +138,6 @@ final class AuthenticationController {
         storage.remove(key: StorageKey.authentication)
     }
     private func send(error: Swift.Error) {
-        delegate.authenticationError(controller: self, error: error)
+        delegates.notify { $0.authenticationError(controller: self, error: error) }
     }
 }
