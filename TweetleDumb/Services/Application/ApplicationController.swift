@@ -60,8 +60,16 @@ private extension ApplicationController {
     func showLogin() {
         let viewModel = LoginViewModel(dependencies: self)
         let viewController = LoginViewController(viewModel: viewModel)
-        navigationController.setViewControllers([viewController], animated: navigationController.shouldAnimate)
-        navigationController.setNavigationBarHidden(true, animated: navigationController.shouldAnimate)
+
+        UIView.animate(withDuration: navigationController.shouldAnimate ? 0.35 : 0) {
+            UIView.setAnimationCurve(.easeInOut)
+
+            self.navigationController.setViewControllers([viewController], animated: self.navigationController.shouldAnimate)
+            self.navigationController.setNavigationBarHidden(true, animated: self.navigationController.shouldAnimate)
+
+            UIView.setAnimationTransition(.flipFromLeft, for: self.navigationController.view, cache: false)
+        }
+
     }
     func showTweets() {
         let viewModel = TweetsViewModel(dependencies: self)
