@@ -24,7 +24,7 @@ final class TweetsViewModel {
     // MARK: - Public Properties
     let delegate = MulticastDelegate<TweetsViewModelDelegate>()
     let cells: [TableViewCellViewModel.Type] = [TweetCellViewModel.self]
-    private(set) var dataSet: [TableViewCellViewModel] = [] {
+    fileprivate(set) var dataSet: [TableViewCellViewModel] = [] {
         didSet {
             delegate.notify { $0.tweetsViewModelUpdated(self) }
         }
@@ -63,5 +63,16 @@ final class TweetsViewModel {
     }
     func compose() {
         delegate.notify { $0.tweetsViewModelCompose(self) }
+    }
+}
+
+extension TweetsViewModel: ComposeViewModelDelegate {
+    func composeViewModelCancel(_ viewModel: ComposeViewModel) { }
+    func composeViewModel(_ viewModel: ComposeViewModel, error: Error) { }
+    func composeViewModel(_ viewModel: ComposeViewModel, newTweet: Tweet) {
+        dataSet.insert(
+            TweetCellViewModel(tweet: newTweet),
+            at: 0
+        )
     }
 }
