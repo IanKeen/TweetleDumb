@@ -56,6 +56,7 @@
 		322F5B751EF0F17A00E94033 /* TableViewCellRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 322F5B711EF0F17A00E94033 /* TableViewCellRepresentable.swift */; };
 		322F5B761EF0F17A00E94033 /* TableViewCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 322F5B721EF0F17A00E94033 /* TableViewCellViewModel.swift */; };
 		322F5B771EF0F17A00E94033 /* ViewModelConfigurable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 322F5B731EF0F17A00E94033 /* ViewModelConfigurable.swift */; };
+		32AC67F51EF108540067DCC1 /* Date+Tweet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32AC67F41EF108540067DCC1 /* Date+Tweet.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -122,6 +123,7 @@
 		322F5B711EF0F17A00E94033 /* TableViewCellRepresentable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewCellRepresentable.swift; sourceTree = "<group>"; };
 		322F5B721EF0F17A00E94033 /* TableViewCellViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewCellViewModel.swift; sourceTree = "<group>"; };
 		322F5B731EF0F17A00E94033 /* ViewModelConfigurable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewModelConfigurable.swift; sourceTree = "<group>"; };
+		32AC67F41EF108540067DCC1 /* Date+Tweet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Date+Tweet.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -196,6 +198,7 @@
 				322F5B5D1EF0C49D00E94033 /* UINavigationController+ShouldAnimate.swift */,
 				322F5B5F1EF0C72100E94033 /* UIView+Constraints.swift */,
 				322F5B611EF0E0CF00E94033 /* MulticastDelegate.swift */,
+				32AC67F41EF108540067DCC1 /* Date+Tweet.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -485,6 +488,7 @@
 				322F5B661EF0EBE300E94033 /* MockNetwork+Error.swift in Sources */,
 				322F5AD51EEF8EED00E94033 /* Network.swift in Sources */,
 				322F5B601EF0C72100E94033 /* UIView+Constraints.swift in Sources */,
+				32AC67F51EF108540067DCC1 /* Date+Tweet.swift in Sources */,
 				322F5AF71EEFABEC00E94033 /* APIRequest.swift in Sources */,
 				322F5AF11EEFAB4C00E94033 /* Authenticator.swift in Sources */,
 			);
