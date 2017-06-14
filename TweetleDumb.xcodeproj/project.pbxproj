@@ -52,6 +52,10 @@
 		322F5B621EF0E0CF00E94033 /* MulticastDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 322F5B611EF0E0CF00E94033 /* MulticastDelegate.swift */; };
 		322F5B641EF0EA1A00E94033 /* AuthenticationController+Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = 322F5B631EF0EA1A00E94033 /* AuthenticationController+Error.swift */; };
 		322F5B661EF0EBE300E94033 /* MockNetwork+Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = 322F5B651EF0EBE300E94033 /* MockNetwork+Error.swift */; };
+		322F5B741EF0F17A00E94033 /* Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 322F5B701EF0F17A00E94033 /* Reusable.swift */; };
+		322F5B751EF0F17A00E94033 /* TableViewCellRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 322F5B711EF0F17A00E94033 /* TableViewCellRepresentable.swift */; };
+		322F5B761EF0F17A00E94033 /* TableViewCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 322F5B721EF0F17A00E94033 /* TableViewCellViewModel.swift */; };
+		322F5B771EF0F17A00E94033 /* ViewModelConfigurable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 322F5B731EF0F17A00E94033 /* ViewModelConfigurable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -114,6 +118,10 @@
 		322F5B611EF0E0CF00E94033 /* MulticastDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MulticastDelegate.swift; sourceTree = "<group>"; };
 		322F5B631EF0EA1A00E94033 /* AuthenticationController+Error.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AuthenticationController+Error.swift"; sourceTree = "<group>"; };
 		322F5B651EF0EBE300E94033 /* MockNetwork+Error.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "MockNetwork+Error.swift"; sourceTree = "<group>"; };
+		322F5B701EF0F17A00E94033 /* Reusable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reusable.swift; sourceTree = "<group>"; };
+		322F5B711EF0F17A00E94033 /* TableViewCellRepresentable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewCellRepresentable.swift; sourceTree = "<group>"; };
+		322F5B721EF0F17A00E94033 /* TableViewCellViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewCellViewModel.swift; sourceTree = "<group>"; };
+		322F5B731EF0F17A00E94033 /* ViewModelConfigurable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewModelConfigurable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -181,6 +189,7 @@
 		322F5ACD1EEF8ED500E94033 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				322F5B6F1EF0F15C00E94033 /* TableViewCellRepresentable */,
 				322F5B131EEFB81900E94033 /* KeyPathAccessible */,
 				322F5AD81EEF8FB000E94033 /* Result */,
 				322F5AE61EEF99FE00E94033 /* Collection+Random.swift */,
@@ -325,6 +334,17 @@
 			path = Login;
 			sourceTree = "<group>";
 		};
+		322F5B6F1EF0F15C00E94033 /* TableViewCellRepresentable */ = {
+			isa = PBXGroup;
+			children = (
+				322F5B701EF0F17A00E94033 /* Reusable.swift */,
+				322F5B711EF0F17A00E94033 /* TableViewCellRepresentable.swift */,
+				322F5B721EF0F17A00E94033 /* TableViewCellViewModel.swift */,
+				322F5B731EF0F17A00E94033 /* ViewModelConfigurable.swift */,
+			);
+			path = TableViewCellRepresentable;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -430,6 +450,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				322F5B741EF0F17A00E94033 /* Reusable.swift in Sources */,
 				322F5B181EEFB81900E94033 /* KeyPathAccessible+Array.swift in Sources */,
 				322F5B1B1EEFB81900E94033 /* KeyPathComponent.swift in Sources */,
 				322F5AF51EEFABA100E94033 /* API.swift in Sources */,
@@ -447,12 +468,15 @@
 				322F5AFD1EEFACCA00E94033 /* User.swift in Sources */,
 				322F5B271EEFD0C300E94033 /* Authentication.swift in Sources */,
 				322F5B4E1EF0A68000E94033 /* Dependencies.swift in Sources */,
+				322F5B751EF0F17A00E94033 /* TableViewCellRepresentable.swift in Sources */,
 				322F5B5C1EF0BA4700E94033 /* CustomViewController.swift in Sources */,
 				322F5B561EF0BA2500E94033 /* LoginViewController.swift in Sources */,
+				322F5B761EF0F17A00E94033 /* TableViewCellViewModel.swift in Sources */,
 				322F5B4A1EF0A65900E94033 /* ApplicationController.swift in Sources */,
 				322F5B4C1EF0A66A00E94033 /* Environment.swift in Sources */,
 				322F5AD61EEF8EED00E94033 /* NetworkRequest.swift in Sources */,
 				322F5B411EF0959E00E94033 /* DataRepresentable.swift in Sources */,
+				322F5B771EF0F17A00E94033 /* ViewModelConfigurable.swift in Sources */,
 				322F5B291EEFD1EB00E94033 /* AuthenticationController.swift in Sources */,
 				322F5B641EF0EA1A00E94033 /* AuthenticationController+Error.swift in Sources */,
 				322F5B2C1EF06D4B00E94033 /* KeyValueStore.swift in Sources */,
