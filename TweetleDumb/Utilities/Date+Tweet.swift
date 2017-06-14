@@ -33,3 +33,15 @@ extension Date {
         self = date
     }
 }
+
+extension Date {
+    private static let tweetStringFormatter: DateFormatter = {
+        let formatter = DateFormatter()
+        formatter.dateStyle = .medium
+        return formatter
+    }()
+
+    func makeString() -> String {
+        return Date.tweetStringFormatter.string(from: self)
+    }
+}
