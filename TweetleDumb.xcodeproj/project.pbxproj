@@ -46,6 +46,7 @@
 		322F5B5C1EF0BA4700E94033 /* CustomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 322F5B5B1EF0BA4700E94033 /* CustomViewController.swift */; };
 		322F5B5E1EF0C49D00E94033 /* UINavigationController+ShouldAnimate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 322F5B5D1EF0C49D00E94033 /* UINavigationController+ShouldAnimate.swift */; };
 		322F5B601EF0C72100E94033 /* UIView+Constraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 322F5B5F1EF0C72100E94033 /* UIView+Constraints.swift */; };
+		322F5B621EF0E0CF00E94033 /* MulticastDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 322F5B611EF0E0CF00E94033 /* MulticastDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -102,6 +103,7 @@
 		322F5B5B1EF0BA4700E94033 /* CustomViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomViewController.swift; sourceTree = "<group>"; };
 		322F5B5D1EF0C49D00E94033 /* UINavigationController+ShouldAnimate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UINavigationController+ShouldAnimate.swift"; sourceTree = "<group>"; };
 		322F5B5F1EF0C72100E94033 /* UIView+Constraints.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Constraints.swift"; sourceTree = "<group>"; };
+		322F5B611EF0E0CF00E94033 /* MulticastDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MulticastDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -174,6 +176,7 @@
 				322F5AE61EEF99FE00E94033 /* Collection+Random.swift */,
 				322F5B5D1EF0C49D00E94033 /* UINavigationController+ShouldAnimate.swift */,
 				322F5B5F1EF0C72100E94033 /* UIView+Constraints.swift */,
+				322F5B611EF0E0CF00E94033 /* MulticastDelegate.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -416,6 +419,7 @@
 				322F5AAE1EEF8D1000E94033 /* AppDelegate.swift in Sources */,
 				322F5B1A1EEFB81900E94033 /* KeyPathAccessible.swift in Sources */,
 				322F5B5E1EF0C49D00E94033 /* UINavigationController+ShouldAnimate.swift in Sources */,
+				322F5B621EF0E0CF00E94033 /* MulticastDelegate.swift in Sources */,
 				322F5AFD1EEFACCA00E94033 /* User.swift in Sources */,
 				322F5B271EEFD0C300E94033 /* Authentication.swift in Sources */,
 				322F5B4E1EF0A68000E94033 /* Dependencies.swift in Sources */,

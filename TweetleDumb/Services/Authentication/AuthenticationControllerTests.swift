@@ -47,9 +47,9 @@ class AuthenticationControllerTests: XCTestCase {
         let controller = AuthenticationController(
             api: api(),
             storage: NSMutableDictionary(),
-            delegate: delegate,
             authenticators: []
         )
+        controller.delegates.add(delegate)
         controller.notifyDelegate()
 
         waitForExpectations(timeout: 1.0, handler: nil)
@@ -65,9 +65,9 @@ class AuthenticationControllerTests: XCTestCase {
         let controller = AuthenticationController(
             api: api(),
             storage: authenticationStorage(),
-            delegate: delegate,
             authenticators: []
         )
+        controller.delegates.add(delegate)
         controller.notifyDelegate()
 
         waitForExpectations(timeout: 1.0, handler: nil)
@@ -84,9 +84,9 @@ class AuthenticationControllerTests: XCTestCase {
         let controller = AuthenticationController(
             api: api(),
             storage: NSMutableDictionary(),
-            delegate: delegate,
             authenticators: []
         )
+        controller.delegates.add(delegate)
         controller.login(using: MockTwitterAuthenticator.self)
 
         waitForExpectations(timeout: 1.0, handler: nil)
@@ -102,9 +102,9 @@ class AuthenticationControllerTests: XCTestCase {
         let controller = AuthenticationController(
             api: api(),
             storage: authenticationStorage(),
-            delegate: delegate,
             authenticators: []
         )
+        controller.delegates.add(delegate)
         controller.login(using: MockTwitterAuthenticator.self)
 
         waitForExpectations(timeout: 1.0, handler: nil)
@@ -120,9 +120,9 @@ class AuthenticationControllerTests: XCTestCase {
         let controller = AuthenticationController(
             api: api(),
             storage: NSMutableDictionary(),
-            delegate: delegate,
             authenticators: []
         )
+        controller.delegates.add(delegate)
         controller.logout()
 
         waitForExpectations(timeout: 1.0, handler: nil)
@@ -139,12 +139,12 @@ class AuthenticationControllerTests: XCTestCase {
         let controller = AuthenticationController(
             api: api(),
             storage: NSMutableDictionary(),
-            delegate: delegate,
             authenticators: [MockTwitterAuthenticator()]
         )
+        controller.delegates.add(delegate)
         controller.login(using: MockTwitterAuthenticator.self)
 
-        waitForExpectations(timeout: 1.0, handler: nil)
+        waitForExpectations(timeout: 2.0, handler: nil)
     }
     func testAuthenticationController_Logout() {
         let exp = expectation(description: "")
@@ -157,9 +157,9 @@ class AuthenticationControllerTests: XCTestCase {
         let controller = AuthenticationController(
             api: api(),
             storage: authenticationStorage(),
-            delegate: delegate,
             authenticators: [MockTwitterAuthenticator()]
         )
+        controller.delegates.add(delegate)
         controller.logout()
 
         waitForExpectations(timeout: 1.0, handler: nil)
@@ -178,11 +178,11 @@ class AuthenticationControllerTests: XCTestCase {
         let controller = AuthenticationController(
             api: api(),
             storage: storage,
-            delegate: delegate,
             authenticators: [MockTwitterAuthenticator()]
         )
+        controller.delegates.add(delegate)
         controller.login(using: MockTwitterAuthenticator.self)
 
-        waitForExpectations(timeout: 1.0, handler: nil)
+        waitForExpectations(timeout: 2.0, handler: nil)
     }
 }
