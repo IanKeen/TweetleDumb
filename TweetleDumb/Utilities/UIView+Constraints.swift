@@ -13,6 +13,13 @@ extension UIView {
         centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
         centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
     }
+
+    func fill(_ view: UIView) {
+        leftAnchor.align(to: view.leftAnchor)
+        rightAnchor.align(to: view.rightAnchor)
+        topAnchor.align(to: view.topAnchor)
+        bottomAnchor.align(to: view.bottomAnchor)
+    }
 }
 extension NSLayoutDimension {
     func align(to anchor: NSLayoutDimension, offset: CGFloat = 0.0) {
