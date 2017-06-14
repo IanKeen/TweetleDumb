@@ -60,11 +60,25 @@ private extension ApplicationController {
     func showLogin() {
         let viewModel = LoginViewModel(dependencies: self)
         let viewController = LoginViewController(viewModel: viewModel)
-        navigationController.setNavigationBarHidden(true, animated: navigationController.shouldAnimate)
         navigationController.setViewControllers([viewController], animated: navigationController.shouldAnimate)
+        navigationController.setNavigationBarHidden(true, animated: navigationController.shouldAnimate)
     }
     func showTweets() {
-        print(#function)
+        let viewModel = TweetsViewModel(dependencies: self)
+        viewModel.delegate.add(self)
+        let viewController = TweetsViewController(viewModel: viewModel)
+        navigationController.setViewControllers([viewController], animated: navigationController.shouldAnimate)
+        navigationController.setNavigationBarHidden(false, animated: navigationController.shouldAnimate)
+    }
+}
+
+// MARK: - TweetsViewModelDelegate
+extension ApplicationController: TweetsViewModelDelegate {
+    func tweetsViewModelUpdated(_ viewModel: TweetsViewModel) {
+        //
+    }
+    func tweetsViewModel(_ viewModel: TweetsViewModel, error: Error) {
+        handle(error: error)
     }
 }
 
