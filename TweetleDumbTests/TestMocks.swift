@@ -12,8 +12,13 @@ import XCTest
 func api() -> API {
     return API(
         network: MockNetwork(randomErrors: false, delay: 0),
-        baseURL: URL(string: "https://api.tweetledumb.com")!
+        baseURL: URL(string: "https://api.tweetledumb.com")!,
+        authenticationState: authenticationState()
     )
+}
+
+func authenticationState(_ storage: KeyValueStore = authenticationStorage()) -> AuthenticationState {
+    return AuthenticationState(storage: storage)
 }
 
 func authenticationStorage() -> KeyValueStore {

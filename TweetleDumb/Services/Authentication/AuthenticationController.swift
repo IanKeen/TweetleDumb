@@ -25,45 +25,24 @@ extension AuthenticationController {
 final class AuthenticationController {
     // MARK: - Private Properties
     private let api: API
-    private let storage: KeyValueStore
-    private let authenticators: [Authenticator]
+    private let authenticationState: AuthenticationState
+    fileprivate let authenticators: [Authenticator]
 
     // MARK: - Public Properties
     let delegates = MulticastDelegate<AuthenticationControllerDelegate>()
-    private(set) var authentication: Authentication? {
-        didSet {
-            switch (oldValue, authentication) {
-            case (.some, .none): // logged in > logout
-                authenticators.forEach { $0.logout() }
-                clearAuthentication()
-                delegates.notify { $0.authenticationLogout(controller: self) }
-
-            case (.none, .some(let auth)): // logged out > login
-                store(authentication: auth)
-                delegates.notify { $0.authenticationLogin(controller: self, authentication: auth) }
-
-            default:
-                // invalid transition's are:
-                // - logged in > login
-                // - logged out > logout
-                print("This transition shouldn't happen")
-            }
-        }
-    }
 
     // MARK: - Lifecycle
-    init(api: API, storage: KeyValueStore, authenticators: [Authenticator]) {
+    init(api: API, authenticationState: AuthenticationState, authenticators: [Authenticator]) {
         self.api = api
-        self.storage = storage
+        self.authenticationState = authenticationState
         self.authenticators = authenticators
 
-        // we assign a value here so we don't trigger the property observer
-        authentication = storedAuthentication()
+        authenticationState.delegates.add(self)
     }
 
     // MARK: - Public Functions
     func notifyDelegate() {
-        switch authentication {
+        switch authenticationState.authentication {
         case .none:
             delegates.notify { $0.authenticationLogout(controller: self) }
 
@@ -72,7 +51,7 @@ final class AuthenticationController {
         }
     }
     func login<T: Authenticator>(using authenticator: T.Type) {
-        guard authentication == nil
+        guard authenticationState.authentication == nil
             else { return send(error: Error.alreadyLoggedIn) }
 
         guard let authenticator = authenticators.first(where: { $0 is T })
@@ -99,7 +78,7 @@ final class AuthenticationController {
                             this.send(error: error)
 
                         case .success(let auth):
-                            this.authentication = auth
+                            this.authenticationState.authentication = auth
                         }
                     }
                 )
@@ -108,29 +87,33 @@ final class AuthenticationController {
         }
     }
     func logout() {
-        guard authentication != nil
+        guard authenticationState.authentication != nil
             else { return send(error: Error.alreadyLoggedOut) }
 
-        authentication = nil
+        authenticationState.authentication = nil
     }
 
     // MARK: - Private Functions
-    private func storedAuthentication() -> Authentication? {
-        guard let json: [String: Any] = storage.get(key: StorageKey.authentication)
-            else { return nil }
-
-        return try? Authentication(json: json)
-    }
-    private func store(authentication: Authentication) {
-        storage.set(
-            value: authentication.makeDictionary(),
-            forKey: StorageKey.authentication
-        )
-    }
-    private func clearAuthentication() {
-        storage.remove(key: StorageKey.authentication)
-    }
     private func send(error: Swift.Error) {
         delegates.notify { $0.authenticationError(controller: self, error: error) }
+    }
+}
+
+extension AuthenticationController: AuthenticationStateDelegate {
+    func authenticationStateUpdated(_ authenticationState: AuthenticationState, from old: Authentication?, to new: Authentication?) {
+        switch (old, new) {
+        case (.some, .none): // logged in > logout
+            authenticators.forEach { $0.logout() }
+            delegates.notify { $0.authenticationLogout(controller: self) }
+
+        case (.none, .some(let auth)): // logged out > login
+            delegates.notify { $0.authenticationLogin(controller: self, authentication: auth) }
+
+        default:
+            // invalid transition's are:
+            // - logged in > login
+            // - logged out > logout
+            print("This transition shouldn't happen")
+        }
     }
 }

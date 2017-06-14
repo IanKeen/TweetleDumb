@@ -46,7 +46,7 @@ class AuthenticationControllerTests: XCTestCase {
         )
         let controller = AuthenticationController(
             api: api(),
-            storage: NSMutableDictionary(),
+            authenticationState: authenticationState(NSMutableDictionary()),
             authenticators: []
         )
         controller.delegates.add(delegate)
@@ -64,7 +64,7 @@ class AuthenticationControllerTests: XCTestCase {
         )
         let controller = AuthenticationController(
             api: api(),
-            storage: authenticationStorage(),
+            authenticationState: authenticationState(),
             authenticators: []
         )
         controller.delegates.add(delegate)
@@ -83,7 +83,7 @@ class AuthenticationControllerTests: XCTestCase {
         )
         let controller = AuthenticationController(
             api: api(),
-            storage: NSMutableDictionary(),
+            authenticationState: authenticationState(NSMutableDictionary()),
             authenticators: []
         )
         controller.delegates.add(delegate)
@@ -101,7 +101,7 @@ class AuthenticationControllerTests: XCTestCase {
         )
         let controller = AuthenticationController(
             api: api(),
-            storage: authenticationStorage(),
+            authenticationState: authenticationState(),
             authenticators: []
         )
         controller.delegates.add(delegate)
@@ -119,7 +119,7 @@ class AuthenticationControllerTests: XCTestCase {
         )
         let controller = AuthenticationController(
             api: api(),
-            storage: NSMutableDictionary(),
+            authenticationState: authenticationState(NSMutableDictionary()),
             authenticators: []
         )
         controller.delegates.add(delegate)
@@ -138,7 +138,7 @@ class AuthenticationControllerTests: XCTestCase {
         )
         let controller = AuthenticationController(
             api: api(),
-            storage: NSMutableDictionary(),
+            authenticationState: authenticationState(NSMutableDictionary()),
             authenticators: [MockTwitterAuthenticator()]
         )
         controller.delegates.add(delegate)
@@ -156,7 +156,7 @@ class AuthenticationControllerTests: XCTestCase {
         )
         let controller = AuthenticationController(
             api: api(),
-            storage: authenticationStorage(),
+            authenticationState: authenticationState(),
             authenticators: [MockTwitterAuthenticator()]
         )
         controller.delegates.add(delegate)
@@ -177,7 +177,7 @@ class AuthenticationControllerTests: XCTestCase {
         )
         let controller = AuthenticationController(
             api: api(),
-            storage: storage,
+            authenticationState: authenticationState(storage),
             authenticators: [MockTwitterAuthenticator()]
         )
         controller.delegates.add(delegate)

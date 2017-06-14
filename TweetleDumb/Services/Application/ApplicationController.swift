@@ -16,9 +16,12 @@ final class ApplicationController {
     fileprivate var composeContainer: UINavigationController?
 
     // MARK: - Public Properties
+    private(set) lazy var authenticationState: AuthenticationState = AuthenticationState(
+        storage: self.environment.keyValueStore
+    )
     private(set) lazy var authenticationController: AuthenticationController = AuthenticationController(
         api: self.api,
-        storage: self.environment.keyValueStore,
+        authenticationState: self.authenticationState,
         authenticators: self.environment.authenticators
     )
     private(set) lazy var api: API = API(

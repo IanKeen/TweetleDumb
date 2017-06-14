@@ -15,7 +15,7 @@ protocol ComposeViewModelDelegate {
 }
 
 final class ComposeViewModel {
-    typealias Dependencies = HasAPI & HasAuthenticationController
+    typealias Dependencies = HasAPI & HasReadOnlyAuthenticationState
 
     // MARK: - Private Properties
     private let dependencies: Dependencies
@@ -37,7 +37,7 @@ final class ComposeViewModel {
         guard text.characters.count <= maxLength
             else { return delegate.notify { $0.composeViewModel(self, error: Error.textTooLong(maxLength)) } }
 
-        guard let authentication = dependencies.authenticationController.authentication
+        guard let authentication = dependencies.readOnlyAuthenticationState.authentication
             else { return delegate.notify { $0.composeViewModel(self, error: AuthenticationController.Error.authenticationRequired) } }
 
         let tweet = Tweet(
