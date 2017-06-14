@@ -47,6 +47,7 @@
 		322F5B5E1EF0C49D00E94033 /* UINavigationController+ShouldAnimate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 322F5B5D1EF0C49D00E94033 /* UINavigationController+ShouldAnimate.swift */; };
 		322F5B601EF0C72100E94033 /* UIView+Constraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 322F5B5F1EF0C72100E94033 /* UIView+Constraints.swift */; };
 		322F5B621EF0E0CF00E94033 /* MulticastDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 322F5B611EF0E0CF00E94033 /* MulticastDelegate.swift */; };
+		322F5B641EF0EA1A00E94033 /* AuthenticationController+Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = 322F5B631EF0EA1A00E94033 /* AuthenticationController+Error.swift */; };
 		322F5B661EF0EBE300E94033 /* MockNetwork+Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = 322F5B651EF0EBE300E94033 /* MockNetwork+Error.swift */; };
 /* End PBXBuildFile section */
 
@@ -105,6 +106,7 @@
 		322F5B5D1EF0C49D00E94033 /* UINavigationController+ShouldAnimate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UINavigationController+ShouldAnimate.swift"; sourceTree = "<group>"; };
 		322F5B5F1EF0C72100E94033 /* UIView+Constraints.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Constraints.swift"; sourceTree = "<group>"; };
 		322F5B611EF0E0CF00E94033 /* MulticastDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MulticastDelegate.swift; sourceTree = "<group>"; };
+		322F5B631EF0EA1A00E94033 /* AuthenticationController+Error.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AuthenticationController+Error.swift"; sourceTree = "<group>"; };
 		322F5B651EF0EBE300E94033 /* MockNetwork+Error.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "MockNetwork+Error.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -231,6 +233,7 @@
 			isa = PBXGroup;
 			children = (
 				322F5AEE1EEFAB4C00E94033 /* Authenticator.swift */,
+				322F5B631EF0EA1A00E94033 /* AuthenticationController+Error.swift */,
 				322F5B281EEFD1EB00E94033 /* AuthenticationController.swift */,
 				322F5B4F1EF0A84E00E94033 /* AuthenticationControllerTests.swift */,
 				322F5AEF1EEFAB4C00E94033 /* MockTwitterAuthenticator.swift */,
@@ -432,6 +435,7 @@
 				322F5AD61EEF8EED00E94033 /* NetworkRequest.swift in Sources */,
 				322F5B411EF0959E00E94033 /* DataRepresentable.swift in Sources */,
 				322F5B291EEFD1EB00E94033 /* AuthenticationController.swift in Sources */,
+				322F5B641EF0EA1A00E94033 /* AuthenticationController+Error.swift in Sources */,
 				322F5B2C1EF06D4B00E94033 /* KeyValueStore.swift in Sources */,
 				322F5B191EEFB81900E94033 /* KeyPathAccessible+Dictionary.swift in Sources */,
 				322F5AE71EEF99FE00E94033 /* Collection+Random.swift in Sources */,

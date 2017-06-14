@@ -8,14 +8,6 @@
 
 import Foundation
 
-extension AuthenticationController {
-    enum Error: Swift.Error {
-        case unsupportedAuthenticator
-        case alreadyLoggedIn
-        case alreadyLoggedOut
-    }
-}
-
 protocol AuthenticationControllerDelegate {
     func authenticationError(controller: AuthenticationController, error: Swift.Error)
     func authenticationLogin(controller: AuthenticationController, authentication: Authentication)
