@@ -20,7 +20,9 @@ final class MockTwitterAuthenticator: Authenticator {
 
     func login(complete: @escaping (Result<String>) -> Void) {
         DispatchQueue.global().asyncAfter(deadline: .now() + 1) {
-            complete(.success(UUID().uuidString))
+            DispatchQueue.main.async {
+                complete(.success(UUID().uuidString))
+            }
         }
     }
     func logout() {
