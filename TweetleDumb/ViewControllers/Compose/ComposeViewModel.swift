@@ -19,9 +19,9 @@ final class ComposeViewModel {
 
     // MARK: - Private Properties
     private let dependencies: Dependencies
-    private let maxLength = 140
 
     // MARK: - Public Properties
+    let maxLength = 140
     let delegate = MulticastDelegate<ComposeViewModelDelegate>()
 
     // MARK: - Lifecycle
