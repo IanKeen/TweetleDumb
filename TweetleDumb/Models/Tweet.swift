@@ -7,3 +7,19 @@
 //
 
 import Foundation
+
+struct Tweet {
+    let id: Int
+    let text: String
+    let posted: Date
+    let user: User
+}
+
+extension Tweet {
+    init(json: [String: Any]) throws {
+        self.id = try json.value(at: "id")
+        self.text = try json.value(at: "text")
+        self.posted = try Date(string: try json.value(at: "posted"))
+        self.user = try User(json: try json.value(at: "user"))
+    }
+}

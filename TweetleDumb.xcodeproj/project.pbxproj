@@ -56,6 +56,7 @@
 		322F5B751EF0F17A00E94033 /* TableViewCellRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 322F5B711EF0F17A00E94033 /* TableViewCellRepresentable.swift */; };
 		322F5B761EF0F17A00E94033 /* TableViewCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 322F5B721EF0F17A00E94033 /* TableViewCellViewModel.swift */; };
 		322F5B771EF0F17A00E94033 /* ViewModelConfigurable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 322F5B731EF0F17A00E94033 /* ViewModelConfigurable.swift */; };
+		322F5B7B1EF0F3C600E94033 /* Tweet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 322F5B7A1EF0F3C600E94033 /* Tweet.swift */; };
 		32AC67F51EF108540067DCC1 /* Date+Tweet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32AC67F41EF108540067DCC1 /* Date+Tweet.swift */; };
 /* End PBXBuildFile section */
 
@@ -123,6 +124,7 @@
 		322F5B711EF0F17A00E94033 /* TableViewCellRepresentable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewCellRepresentable.swift; sourceTree = "<group>"; };
 		322F5B721EF0F17A00E94033 /* TableViewCellViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewCellViewModel.swift; sourceTree = "<group>"; };
 		322F5B731EF0F17A00E94033 /* ViewModelConfigurable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewModelConfigurable.swift; sourceTree = "<group>"; };
+		322F5B7A1EF0F3C600E94033 /* Tweet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tweet.swift; sourceTree = "<group>"; };
 		32AC67F41EF108540067DCC1 /* Date+Tweet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Date+Tweet.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -274,6 +276,7 @@
 			children = (
 				322F5B261EEFD0C300E94033 /* Authentication.swift */,
 				322F5AFC1EEFACCA00E94033 /* User.swift */,
+				322F5B7A1EF0F3C600E94033 /* Tweet.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -456,6 +459,7 @@
 				322F5B741EF0F17A00E94033 /* Reusable.swift in Sources */,
 				322F5B181EEFB81900E94033 /* KeyPathAccessible+Array.swift in Sources */,
 				322F5B1B1EEFB81900E94033 /* KeyPathComponent.swift in Sources */,
+				322F5B7B1EF0F3C600E94033 /* Tweet.swift in Sources */,
 				322F5AF51EEFABA100E94033 /* API.swift in Sources */,
 				322F5B471EF099AF00E94033 /* AuthenticationRequest.swift in Sources */,
 				322F5AE51EEF95FA00E94033 /* MockNetwork.swift in Sources */,
