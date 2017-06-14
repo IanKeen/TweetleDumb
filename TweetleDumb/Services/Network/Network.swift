@@ -8,8 +8,15 @@
 
 import Foundation
 
-enum NetworkError: Error {
+enum NetworkError: LocalizedError {
     case invalidResponse(NetworkResponse)
+
+    var errorDescription: String? {
+        switch self {
+        case .invalidResponse:
+            return "Received an unexpected response"
+        }
+    }
 }
 
 /// Represents the network layer
