@@ -65,6 +65,8 @@
 		32AC67F51EF108540067DCC1 /* Date+Tweet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32AC67F41EF108540067DCC1 /* Date+Tweet.swift */; };
 		32AC67F81EF10D8F0067DCC1 /* TweetCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32AC67F71EF10D8F0067DCC1 /* TweetCell.swift */; };
 		32AC67FA1EF10DA90067DCC1 /* TweetCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32AC67F91EF10DA90067DCC1 /* TweetCellViewModel.swift */; };
+		32AC68051EF11E7B0067DCC1 /* compose.json in Resources */ = {isa = PBXBuildFile; fileRef = 32AC68041EF11E7B0067DCC1 /* compose.json */; };
+		32AC68071EF11E910067DCC1 /* ComposeRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32AC68061EF11E910067DCC1 /* ComposeRequest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -140,6 +142,8 @@
 		32AC67F41EF108540067DCC1 /* Date+Tweet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Date+Tweet.swift"; sourceTree = "<group>"; };
 		32AC67F71EF10D8F0067DCC1 /* TweetCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TweetCell.swift; sourceTree = "<group>"; };
 		32AC67F91EF10DA90067DCC1 /* TweetCellViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TweetCellViewModel.swift; sourceTree = "<group>"; };
+		32AC68041EF11E7B0067DCC1 /* compose.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = compose.json; sourceTree = "<group>"; };
+		32AC68061EF11E910067DCC1 /* ComposeRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ComposeRequest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -260,6 +264,7 @@
 				322F5B651EF0EBE300E94033 /* MockNetwork+Error.swift */,
 				322F5AEA1EEFAA1100E94033 /* authentication.json */,
 				322F5B7C1EF0F50000E94033 /* tweets.json */,
+				32AC68041EF11E7B0067DCC1 /* compose.json */,
 			);
 			path = MockNetwork;
 			sourceTree = "<group>";
@@ -323,6 +328,7 @@
 			children = (
 				322F5B461EF099AF00E94033 /* AuthenticationRequest.swift */,
 				322F5B781EF0F39300E94033 /* TweetsRequest.swift */,
+				32AC68061EF11E910067DCC1 /* ComposeRequest.swift */,
 			);
 			path = Requests;
 			sourceTree = "<group>";
@@ -475,6 +481,7 @@
 			files = (
 				322F5AEB1EEFAA1100E94033 /* authentication.json in Resources */,
 				322F5AB81EEF8D1000E94033 /* LaunchScreen.storyboard in Resources */,
+				32AC68051EF11E7B0067DCC1 /* compose.json in Resources */,
 				322F5AB51EEF8D1000E94033 /* Assets.xcassets in Resources */,
 				322F5B7D1EF0F50000E94033 /* tweets.json in Resources */,
 			);
@@ -500,6 +507,7 @@
 				322F5B7B1EF0F3C600E94033 /* Tweet.swift in Sources */,
 				322F5AF51EEFABA100E94033 /* API.swift in Sources */,
 				322F5B471EF099AF00E94033 /* AuthenticationRequest.swift in Sources */,
+				32AC68071EF11E910067DCC1 /* ComposeRequest.swift in Sources */,
 				322F5AE51EEF95FA00E94033 /* MockNetwork.swift in Sources */,
 				322F5AF21EEFAB4C00E94033 /* MockTwitterAuthenticator.swift in Sources */,
 				322F5AD71EEF8EED00E94033 /* NetworkResponse.swift in Sources */,
