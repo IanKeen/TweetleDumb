@@ -38,6 +38,7 @@
 		322F5B471EF099AF00E94033 /* AuthenticationRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 322F5B461EF099AF00E94033 /* AuthenticationRequest.swift */; };
 		322F5B291EEFD1EB00E94033 /* AuthenticationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 322F5B281EEFD1EB00E94033 /* AuthenticationController.swift */; };
 		322F5B2C1EF06D4B00E94033 /* KeyValueStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 322F5B2B1EF06D4B00E94033 /* KeyValueStore.swift */; };
+		322F5B501EF0A84E00E94033 /* AuthenticationControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 322F5B4F1EF0A84E00E94033 /* AuthenticationControllerTests.swift */; };
 		322F5B521EF0AF2600E94033 /* TestMocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 322F5B511EF0AF2600E94033 /* TestMocks.swift */; };
 /* End PBXBuildFile section */
 
@@ -87,6 +88,7 @@
 		322F5B461EF099AF00E94033 /* AuthenticationRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthenticationRequest.swift; sourceTree = "<group>"; };
 		322F5B281EEFD1EB00E94033 /* AuthenticationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthenticationController.swift; sourceTree = "<group>"; };
 		322F5B2B1EF06D4B00E94033 /* KeyValueStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyValueStore.swift; sourceTree = "<group>"; };
+		322F5B4F1EF0A84E00E94033 /* AuthenticationControllerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthenticationControllerTests.swift; sourceTree = "<group>"; };
 		322F5B511EF0AF2600E94033 /* TestMocks.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestMocks.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -208,6 +210,7 @@
 			children = (
 				322F5AEE1EEFAB4C00E94033 /* Authenticator.swift */,
 				322F5B281EEFD1EB00E94033 /* AuthenticationController.swift */,
+				322F5B4F1EF0A84E00E94033 /* AuthenticationControllerTests.swift */,
 				322F5AEF1EEFAB4C00E94033 /* MockTwitterAuthenticator.swift */,
 			);
 			path = Authentication;
@@ -395,6 +398,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				322F5B501EF0A84E00E94033 /* AuthenticationControllerTests.swift in Sources */,
 				322F5B521EF0AF2600E94033 /* TestMocks.swift in Sources */,
 				322F5B021EEFB35E00E94033 /* NetworkResponseTests.swift in Sources */,
 				322F5B1F1EEFC1AF00E94033 /* KeyPathAccessibleDictionaryTests.swift in Sources */,
