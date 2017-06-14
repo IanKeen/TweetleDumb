@@ -13,6 +13,7 @@ extension AuthenticationController {
         case unsupportedAuthenticator
         case alreadyLoggedIn
         case alreadyLoggedOut
+        case authenticationRequired
 
         var errorDescription: String? {
             switch self {
@@ -22,6 +23,8 @@ extension AuthenticationController {
                 return "You are already logged in"
             case .alreadyLoggedOut:
                 return "You are already logged out"
+            case .authenticationRequired:
+                return "You need to be logged in to perform this action"
             }
         }
     }
