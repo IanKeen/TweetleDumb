@@ -35,6 +35,7 @@ final class AuthenticationController {
             switch (oldValue, authentication) {
             case (.some, .none): // logged in > logout
                 authenticators.forEach { $0.logout() }
+                clearAuthentication()
                 delegates.notify { $0.authenticationLogout(controller: self) }
 
             case (.none, .some(let auth)): // logged out > login
