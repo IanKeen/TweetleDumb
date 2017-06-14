@@ -43,6 +43,7 @@
 		322F5B4E1EF0A68000E94033 /* Dependencies.swift in Sources */ = {isa = PBXBuildFile; fileRef = 322F5B4D1EF0A68000E94033 /* Dependencies.swift */; };
 		322F5B501EF0A84E00E94033 /* AuthenticationControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 322F5B4F1EF0A84E00E94033 /* AuthenticationControllerTests.swift */; };
 		322F5B521EF0AF2600E94033 /* TestMocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 322F5B511EF0AF2600E94033 /* TestMocks.swift */; };
+		322F5B5E1EF0C49D00E94033 /* UINavigationController+ShouldAnimate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 322F5B5D1EF0C49D00E94033 /* UINavigationController+ShouldAnimate.swift */; };
 		322F5B601EF0C72100E94033 /* UIView+Constraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 322F5B5F1EF0C72100E94033 /* UIView+Constraints.swift */; };
 /* End PBXBuildFile section */
 
@@ -97,6 +98,7 @@
 		322F5B4D1EF0A68000E94033 /* Dependencies.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Dependencies.swift; sourceTree = "<group>"; };
 		322F5B4F1EF0A84E00E94033 /* AuthenticationControllerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthenticationControllerTests.swift; sourceTree = "<group>"; };
 		322F5B511EF0AF2600E94033 /* TestMocks.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestMocks.swift; sourceTree = "<group>"; };
+		322F5B5D1EF0C49D00E94033 /* UINavigationController+ShouldAnimate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UINavigationController+ShouldAnimate.swift"; sourceTree = "<group>"; };
 		322F5B5F1EF0C72100E94033 /* UIView+Constraints.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Constraints.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -167,6 +169,7 @@
 				322F5B131EEFB81900E94033 /* KeyPathAccessible */,
 				322F5AD81EEF8FB000E94033 /* Result */,
 				322F5AE61EEF99FE00E94033 /* Collection+Random.swift */,
+				322F5B5D1EF0C49D00E94033 /* UINavigationController+ShouldAnimate.swift */,
 				322F5B5F1EF0C72100E94033 /* UIView+Constraints.swift */,
 			);
 			path = Utilities;
@@ -400,6 +403,7 @@
 				322F5ADA1EEF8FC000E94033 /* Result.swift in Sources */,
 				322F5AAE1EEF8D1000E94033 /* AppDelegate.swift in Sources */,
 				322F5B1A1EEFB81900E94033 /* KeyPathAccessible.swift in Sources */,
+				322F5B5E1EF0C49D00E94033 /* UINavigationController+ShouldAnimate.swift in Sources */,
 				322F5AFD1EEFACCA00E94033 /* User.swift in Sources */,
 				322F5B271EEFD0C300E94033 /* Authentication.swift in Sources */,
 				322F5B4E1EF0A68000E94033 /* Dependencies.swift in Sources */,
