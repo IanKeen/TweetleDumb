@@ -10,7 +10,6 @@
 		322F5AAE1EEF8D1000E94033 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 322F5AAD1EEF8D1000E94033 /* AppDelegate.swift */; };
 		322F5AB51EEF8D1000E94033 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 322F5AB41EEF8D1000E94033 /* Assets.xcassets */; };
 		322F5AB81EEF8D1000E94033 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 322F5AB61EEF8D1000E94033 /* LaunchScreen.storyboard */; };
-		322F5AC31EEF8D1000E94033 /* TweetleDumbTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 322F5AC21EEF8D1000E94033 /* TweetleDumbTests.swift */; };
 		322F5AD51EEF8EED00E94033 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 322F5AD21EEF8EED00E94033 /* Network.swift */; };
 		322F5AD61EEF8EED00E94033 /* NetworkRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 322F5AD31EEF8EED00E94033 /* NetworkRequest.swift */; };
 		322F5AD71EEF8EED00E94033 /* NetworkResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 322F5AD41EEF8EED00E94033 /* NetworkResponse.swift */; };
@@ -39,6 +38,7 @@
 		322F5B471EF099AF00E94033 /* AuthenticationRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 322F5B461EF099AF00E94033 /* AuthenticationRequest.swift */; };
 		322F5B291EEFD1EB00E94033 /* AuthenticationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 322F5B281EEFD1EB00E94033 /* AuthenticationController.swift */; };
 		322F5B2C1EF06D4B00E94033 /* KeyValueStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 322F5B2B1EF06D4B00E94033 /* KeyValueStore.swift */; };
+		322F5B521EF0AF2600E94033 /* TestMocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 322F5B511EF0AF2600E94033 /* TestMocks.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,7 +58,6 @@
 		322F5AB71EEF8D1000E94033 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		322F5AB91EEF8D1000E94033 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		322F5ABE1EEF8D1000E94033 /* TweetleDumbTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TweetleDumbTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		322F5AC21EEF8D1000E94033 /* TweetleDumbTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetleDumbTests.swift; sourceTree = "<group>"; };
 		322F5AC41EEF8D1000E94033 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		322F5AD21EEF8EED00E94033 /* Network.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
 		322F5AD31EEF8EED00E94033 /* NetworkRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkRequest.swift; sourceTree = "<group>"; };
@@ -88,6 +87,7 @@
 		322F5B461EF099AF00E94033 /* AuthenticationRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthenticationRequest.swift; sourceTree = "<group>"; };
 		322F5B281EEFD1EB00E94033 /* AuthenticationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthenticationController.swift; sourceTree = "<group>"; };
 		322F5B2B1EF06D4B00E94033 /* KeyValueStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyValueStore.swift; sourceTree = "<group>"; };
+		322F5B511EF0AF2600E94033 /* TestMocks.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestMocks.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -146,7 +146,7 @@
 				322F5AC41EEF8D1000E94033 /* Info.plist */,
 				322F5ADD1EEF906900E94033 /* Result+Tests.swift */,
 				322F5ADF1EEF90E700E94033 /* TestCommon.swift */,
-				322F5AC21EEF8D1000E94033 /* TweetleDumbTests.swift */,
+				322F5B511EF0AF2600E94033 /* TestMocks.swift */,
 			);
 			path = TweetleDumbTests;
 			sourceTree = "<group>";
@@ -395,6 +395,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				322F5B521EF0AF2600E94033 /* TestMocks.swift in Sources */,
 				322F5B021EEFB35E00E94033 /* NetworkResponseTests.swift in Sources */,
 				322F5B1F1EEFC1AF00E94033 /* KeyPathAccessibleDictionaryTests.swift in Sources */,
 				322F5AE01EEF90E700E94033 /* TestCommon.swift in Sources */,
@@ -402,7 +403,6 @@
 				322F5ADC1EEF8FDC00E94033 /* ResultTests.swift in Sources */,
 				322F5ADE1EEF906900E94033 /* Result+Tests.swift in Sources */,
 				322F5B211EEFC48F00E94033 /* KeyPathAccessibleTests.swift in Sources */,
-				322F5AC31EEF8D1000E94033 /* TweetleDumbTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

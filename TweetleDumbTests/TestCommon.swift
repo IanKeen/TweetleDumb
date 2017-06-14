@@ -7,6 +7,7 @@
 //
 
 import XCTest
+@testable import TweetleDumb
 
 enum TestError: Error, Equatable {
     case error
@@ -26,5 +27,25 @@ func XCTAssertThrows<T: Error>(file: StaticString = #file, line: UInt = #line, e
 
     } catch {
         XCTFail(file: file, line: line)
+    }
+}
+
+extension XCTestExpectation {
+    func fulfill<T>(when left: T, equals right: T, file: StaticString = #file, line: UInt = #line) {
+        fulfill(when: String(describing: left), equals: String(describing: right), file: file, line: line)
+    }
+    func fulfill<T: Equatable>(when left: T, equals right: T, file: StaticString = #file, line: UInt = #line) {
+        if left == right {
+            fulfill()
+        } else {
+            XCTFail(file: file, line: line)
+        }
+    }
+    func fulfill(file: StaticString = #file, line: UInt = #line, when predicate: () -> Bool) {
+        if predicate() {
+            fulfill()
+        } else {
+            XCTFail(file: file, line: line)
+        }
     }
 }
