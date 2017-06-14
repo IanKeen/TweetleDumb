@@ -32,6 +32,10 @@ extension Date {
 
         self = date
     }
+
+    func jsonString() -> String {
+        return Date.tweetDateFormatter.string(from: self)
+    }
 }
 
 extension Date {

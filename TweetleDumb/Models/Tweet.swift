@@ -22,4 +22,13 @@ extension Tweet {
         self.posted = try Date(string: try json.value(at: "posted"))
         self.user = try User(json: try json.value(at: "user"))
     }
+
+    func makeDictionary() -> [String: Any] {
+        return [
+            "id": id,
+            "text": text,
+            "posted": posted.jsonString(),
+            "user": user.makeDictionary()
+        ]
+    }
 }
