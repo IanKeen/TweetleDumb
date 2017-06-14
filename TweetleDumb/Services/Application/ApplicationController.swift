@@ -55,9 +55,13 @@ private extension ApplicationController {
     }
 }
 
+// MARK: - Routing
 private extension ApplicationController {
     func showLogin() {
-        print(#function)
+        let viewModel = LoginViewModel(dependencies: self)
+        let viewController = LoginViewController(viewModel: viewModel)
+        navigationController.setNavigationBarHidden(true, animated: navigationController.shouldAnimate)
+        navigationController.setViewControllers([viewController], animated: navigationController.shouldAnimate)
     }
     func showTweets() {
         print(#function)
