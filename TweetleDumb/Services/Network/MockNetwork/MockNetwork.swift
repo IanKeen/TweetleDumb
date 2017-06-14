@@ -59,7 +59,7 @@ final class MockNetwork: Network {
 
     // MARK: - Private Functions
     private func dontFail() -> Bool {
-        return !randomErrors || ((0..<10).random() ?? 0) < 5
+        return !randomErrors || [0,1,2,3,4,5,6,7,8,9].random()! > 1
     }
     private func file(for url: URL) -> URL? {
         return Bundle.main.url(forResource: (url.absoluteString as NSString).lastPathComponent, withExtension: "json")
