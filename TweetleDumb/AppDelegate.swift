@@ -15,6 +15,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
 
+        let navigationController = UINavigationController()
+
         applicationController = ApplicationController(
             environment: Environment(
                 baseURL: URL(string: "https://api.tweetledumb.com")!,
@@ -24,11 +26,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 ],
                 network: MockNetwork()
             ),
-            rootNavigationController: UINavigationController()
+            rootNavigationController: navigationController
         )
+
+        let window = UIWindow(frame: UIScreen.main.bounds)
+        window.rootViewController = navigationController
+        self.window = window
 
         applicationController.start()
 
+        window.makeKeyAndVisible()
         return true
     }
 }
