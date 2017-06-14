@@ -10,9 +10,22 @@ import UIKit
 
 final class TweetsViewController: CustomViewController<TweetsView, TweetsViewModel>, UITableViewDataSource {
     // MARK: - Lifecycle
+    required init(viewModel: TweetsViewModel) {
+        super.init(viewModel: viewModel)
+
+        title = "Tweets"
+        navigationItem.leftBarButtonItem = UIBarButtonItem(
+            title: "Logout",
+            style: .plain,
+            target: self,
+            action: #selector(logoutBarButtonItemTouchUpInside)
+        )
+    }
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = "Tweets"
 
         customView.refreshControl?.addTarget(self, action: #selector(refreshControlValueChanged), for: .valueChanged)
         customView.register(cells: viewModel.cells)
@@ -37,6 +50,9 @@ final class TweetsViewController: CustomViewController<TweetsView, TweetsViewMod
     // MARK: - Actions
     @objc private func refreshControlValueChanged(sender: UIRefreshControl) {
         viewModel.reloadData()
+    }
+    @objc private func logoutBarButtonItemTouchUpInside(sender: UIBarButtonItem) {
+        viewModel.logout()
     }
 }
 

@@ -14,7 +14,7 @@ protocol TweetsViewModelDelegate: class {
 }
 
 final class TweetsViewModel {
-    typealias Dependencies = HasAPI
+    typealias Dependencies = HasAPI & HasAuthenticationController
 
     // MARK: - Private Properties
     private let dependencies: Dependencies
@@ -56,5 +56,8 @@ final class TweetsViewModel {
 
             this.working = false
         }
+    }
+    func logout() {
+        dependencies.authenticationController.logout()
     }
 }
