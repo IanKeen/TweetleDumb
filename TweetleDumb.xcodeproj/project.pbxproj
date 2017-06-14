@@ -65,8 +65,12 @@
 		32AC67F51EF108540067DCC1 /* Date+Tweet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32AC67F41EF108540067DCC1 /* Date+Tweet.swift */; };
 		32AC67F81EF10D8F0067DCC1 /* TweetCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32AC67F71EF10D8F0067DCC1 /* TweetCell.swift */; };
 		32AC67FA1EF10DA90067DCC1 /* TweetCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32AC67F91EF10DA90067DCC1 /* TweetCellViewModel.swift */; };
+		32AC67FF1EF11CB90067DCC1 /* ComposeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32AC67FE1EF11CB90067DCC1 /* ComposeViewController.swift */; };
+		32AC68011EF11CC20067DCC1 /* ComposeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32AC68001EF11CC20067DCC1 /* ComposeView.swift */; };
+		32AC68031EF11CCB0067DCC1 /* ComposeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32AC68021EF11CCB0067DCC1 /* ComposeViewModel.swift */; };
 		32AC68051EF11E7B0067DCC1 /* compose.json in Resources */ = {isa = PBXBuildFile; fileRef = 32AC68041EF11E7B0067DCC1 /* compose.json */; };
 		32AC68071EF11E910067DCC1 /* ComposeRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32AC68061EF11E910067DCC1 /* ComposeRequest.swift */; };
+		32AC68091EF122CC0067DCC1 /* ComposeViewModel+Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32AC68081EF122CC0067DCC1 /* ComposeViewModel+Error.swift */; };
 		32AC680B1EF1321C0067DCC1 /* KeyboardObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32AC680A1EF1321C0067DCC1 /* KeyboardObserver.swift */; };
 /* End PBXBuildFile section */
 
@@ -143,8 +147,12 @@
 		32AC67F41EF108540067DCC1 /* Date+Tweet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Date+Tweet.swift"; sourceTree = "<group>"; };
 		32AC67F71EF10D8F0067DCC1 /* TweetCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TweetCell.swift; sourceTree = "<group>"; };
 		32AC67F91EF10DA90067DCC1 /* TweetCellViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TweetCellViewModel.swift; sourceTree = "<group>"; };
+		32AC67FE1EF11CB90067DCC1 /* ComposeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ComposeViewController.swift; sourceTree = "<group>"; };
+		32AC68001EF11CC20067DCC1 /* ComposeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ComposeView.swift; sourceTree = "<group>"; };
+		32AC68021EF11CCB0067DCC1 /* ComposeViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ComposeViewModel.swift; sourceTree = "<group>"; };
 		32AC68041EF11E7B0067DCC1 /* compose.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = compose.json; sourceTree = "<group>"; };
 		32AC68061EF11E910067DCC1 /* ComposeRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ComposeRequest.swift; sourceTree = "<group>"; };
+		32AC68081EF122CC0067DCC1 /* ComposeViewModel+Error.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ComposeViewModel+Error.swift"; sourceTree = "<group>"; };
 		32AC680A1EF1321C0067DCC1 /* KeyboardObserver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyboardObserver.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -351,6 +359,7 @@
 			children = (
 				322F5B541EF0B9EE00E94033 /* Login */,
 				322F5B671EF0EF5F00E94033 /* Tweets */,
+				32AC67FD1EF11CA20067DCC1 /* Compose */,
 				322F5B5B1EF0BA4700E94033 /* CustomViewController.swift */,
 			);
 			path = ViewControllers;
@@ -395,6 +404,17 @@
 				32AC67F91EF10DA90067DCC1 /* TweetCellViewModel.swift */,
 			);
 			path = TweetCell;
+			sourceTree = "<group>";
+		};
+		32AC67FD1EF11CA20067DCC1 /* Compose */ = {
+			isa = PBXGroup;
+			children = (
+				32AC68001EF11CC20067DCC1 /* ComposeView.swift */,
+				32AC67FE1EF11CB90067DCC1 /* ComposeViewController.swift */,
+				32AC68021EF11CCB0067DCC1 /* ComposeViewModel.swift */,
+				32AC68081EF122CC0067DCC1 /* ComposeViewModel+Error.swift */,
+			);
+			path = Compose;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -507,6 +527,7 @@
 				322F5B741EF0F17A00E94033 /* Reusable.swift in Sources */,
 				322F5B181EEFB81900E94033 /* KeyPathAccessible+Array.swift in Sources */,
 				322F5B1B1EEFB81900E94033 /* KeyPathComponent.swift in Sources */,
+				32AC68031EF11CCB0067DCC1 /* ComposeViewModel.swift in Sources */,
 				322F5B7B1EF0F3C600E94033 /* Tweet.swift in Sources */,
 				322F5AF51EEFABA100E94033 /* API.swift in Sources */,
 				322F5B471EF099AF00E94033 /* AuthenticationRequest.swift in Sources */,
@@ -519,6 +540,7 @@
 				322F5AAE1EEF8D1000E94033 /* AppDelegate.swift in Sources */,
 				322F5B1A1EEFB81900E94033 /* KeyPathAccessible.swift in Sources */,
 				322F5B581EF0BA2D00E94033 /* LoginView.swift in Sources */,
+				32AC68011EF11CC20067DCC1 /* ComposeView.swift in Sources */,
 				322F5B5E1EF0C49D00E94033 /* UINavigationController+ShouldAnimate.swift in Sources */,
 				32AC67FA1EF10DA90067DCC1 /* TweetCellViewModel.swift in Sources */,
 				32AC67F81EF10D8F0067DCC1 /* TweetCell.swift in Sources */,
@@ -532,6 +554,7 @@
 				322F5B761EF0F17A00E94033 /* TableViewCellViewModel.swift in Sources */,
 				322F5B4A1EF0A65900E94033 /* ApplicationController.swift in Sources */,
 				322F5B691EF0EF6E00E94033 /* TweetsViewController.swift in Sources */,
+				32AC67FF1EF11CB90067DCC1 /* ComposeViewController.swift in Sources */,
 				32AC680B1EF1321C0067DCC1 /* KeyboardObserver.swift in Sources */,
 				322F5B4C1EF0A66A00E94033 /* Environment.swift in Sources */,
 				322F5AD61EEF8EED00E94033 /* NetworkRequest.swift in Sources */,
@@ -542,6 +565,7 @@
 				322F5B291EEFD1EB00E94033 /* AuthenticationController.swift in Sources */,
 				322F5B641EF0EA1A00E94033 /* AuthenticationController+Error.swift in Sources */,
 				322F5B2C1EF06D4B00E94033 /* KeyValueStore.swift in Sources */,
+				32AC68091EF122CC0067DCC1 /* ComposeViewModel+Error.swift in Sources */,
 				322F5B191EEFB81900E94033 /* KeyPathAccessible+Dictionary.swift in Sources */,
 				322F5AE71EEF99FE00E94033 /* Collection+Random.swift in Sources */,
 				322F5B661EF0EBE300E94033 /* MockNetwork+Error.swift in Sources */,
