@@ -34,10 +34,13 @@
 		322F5B1F1EEFC1AF00E94033 /* KeyPathAccessibleDictionaryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 322F5B1E1EEFC1AF00E94033 /* KeyPathAccessibleDictionaryTests.swift */; };
 		322F5B211EEFC48F00E94033 /* KeyPathAccessibleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 322F5B201EEFC48F00E94033 /* KeyPathAccessibleTests.swift */; };
 		322F5B271EEFD0C300E94033 /* Authentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 322F5B261EEFD0C300E94033 /* Authentication.swift */; };
-		322F5B411EF0959E00E94033 /* DataRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 322F5B401EF0959E00E94033 /* DataRepresentable.swift */; };
-		322F5B471EF099AF00E94033 /* AuthenticationRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 322F5B461EF099AF00E94033 /* AuthenticationRequest.swift */; };
 		322F5B291EEFD1EB00E94033 /* AuthenticationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 322F5B281EEFD1EB00E94033 /* AuthenticationController.swift */; };
 		322F5B2C1EF06D4B00E94033 /* KeyValueStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 322F5B2B1EF06D4B00E94033 /* KeyValueStore.swift */; };
+		322F5B411EF0959E00E94033 /* DataRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 322F5B401EF0959E00E94033 /* DataRepresentable.swift */; };
+		322F5B471EF099AF00E94033 /* AuthenticationRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 322F5B461EF099AF00E94033 /* AuthenticationRequest.swift */; };
+		322F5B4A1EF0A65900E94033 /* ApplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 322F5B491EF0A65900E94033 /* ApplicationController.swift */; };
+		322F5B4C1EF0A66A00E94033 /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 322F5B4B1EF0A66A00E94033 /* Environment.swift */; };
+		322F5B4E1EF0A68000E94033 /* Dependencies.swift in Sources */ = {isa = PBXBuildFile; fileRef = 322F5B4D1EF0A68000E94033 /* Dependencies.swift */; };
 		322F5B501EF0A84E00E94033 /* AuthenticationControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 322F5B4F1EF0A84E00E94033 /* AuthenticationControllerTests.swift */; };
 		322F5B521EF0AF2600E94033 /* TestMocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 322F5B511EF0AF2600E94033 /* TestMocks.swift */; };
 /* End PBXBuildFile section */
@@ -84,10 +87,13 @@
 		322F5B1E1EEFC1AF00E94033 /* KeyPathAccessibleDictionaryTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyPathAccessibleDictionaryTests.swift; sourceTree = "<group>"; };
 		322F5B201EEFC48F00E94033 /* KeyPathAccessibleTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyPathAccessibleTests.swift; sourceTree = "<group>"; };
 		322F5B261EEFD0C300E94033 /* Authentication.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Authentication.swift; sourceTree = "<group>"; };
-		322F5B401EF0959E00E94033 /* DataRepresentable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataRepresentable.swift; sourceTree = "<group>"; };
-		322F5B461EF099AF00E94033 /* AuthenticationRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthenticationRequest.swift; sourceTree = "<group>"; };
 		322F5B281EEFD1EB00E94033 /* AuthenticationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthenticationController.swift; sourceTree = "<group>"; };
 		322F5B2B1EF06D4B00E94033 /* KeyValueStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyValueStore.swift; sourceTree = "<group>"; };
+		322F5B401EF0959E00E94033 /* DataRepresentable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataRepresentable.swift; sourceTree = "<group>"; };
+		322F5B461EF099AF00E94033 /* AuthenticationRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthenticationRequest.swift; sourceTree = "<group>"; };
+		322F5B491EF0A65900E94033 /* ApplicationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApplicationController.swift; sourceTree = "<group>"; };
+		322F5B4B1EF0A66A00E94033 /* Environment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Environment.swift; sourceTree = "<group>"; };
+		322F5B4D1EF0A68000E94033 /* Dependencies.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Dependencies.swift; sourceTree = "<group>"; };
 		322F5B4F1EF0A84E00E94033 /* AuthenticationControllerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthenticationControllerTests.swift; sourceTree = "<group>"; };
 		322F5B511EF0AF2600E94033 /* TestMocks.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestMocks.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -166,6 +172,7 @@
 		322F5AD01EEF8EE500E94033 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				322F5B481EF0A65000E94033 /* Application */,
 				322F5AF31EEFAB7300E94033 /* API */,
 				322F5AEC1EEFAB4C00E94033 /* Authentication */,
 				322F5AD11EEF8EED00E94033 /* Network */,
@@ -249,6 +256,14 @@
 			path = KeyPathAccessible;
 			sourceTree = "<group>";
 		};
+		322F5B2A1EF06D2B00E94033 /* KeyValueStore */ = {
+			isa = PBXGroup;
+			children = (
+				322F5B2B1EF06D4B00E94033 /* KeyValueStore.swift */,
+			);
+			path = KeyValueStore;
+			sourceTree = "<group>";
+		};
 		322F5B451EF099AF00E94033 /* Requests */ = {
 			isa = PBXGroup;
 			children = (
@@ -257,12 +272,14 @@
 			path = Requests;
 			sourceTree = "<group>";
 		};
-		322F5B2A1EF06D2B00E94033 /* KeyValueStore */ = {
+		322F5B481EF0A65000E94033 /* Application */ = {
 			isa = PBXGroup;
 			children = (
-				322F5B2B1EF06D4B00E94033 /* KeyValueStore.swift */,
+				322F5B4B1EF0A66A00E94033 /* Environment.swift */,
+				322F5B4D1EF0A68000E94033 /* Dependencies.swift */,
+				322F5B491EF0A65900E94033 /* ApplicationController.swift */,
 			);
-			path = KeyValueStore;
+			path = Application;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -382,6 +399,9 @@
 				322F5B1A1EEFB81900E94033 /* KeyPathAccessible.swift in Sources */,
 				322F5AFD1EEFACCA00E94033 /* User.swift in Sources */,
 				322F5B271EEFD0C300E94033 /* Authentication.swift in Sources */,
+				322F5B4E1EF0A68000E94033 /* Dependencies.swift in Sources */,
+				322F5B4A1EF0A65900E94033 /* ApplicationController.swift in Sources */,
+				322F5B4C1EF0A66A00E94033 /* Environment.swift in Sources */,
 				322F5AD61EEF8EED00E94033 /* NetworkRequest.swift in Sources */,
 				322F5B411EF0959E00E94033 /* DataRepresentable.swift in Sources */,
 				322F5B291EEFD1EB00E94033 /* AuthenticationController.swift in Sources */,
