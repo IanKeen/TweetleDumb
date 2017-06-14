@@ -12,7 +12,7 @@ import UIKit
 final class ApplicationController {
     // MARK: - Private Properties
     private let environment: Environment
-    private let navigationController: UINavigationController
+    fileprivate let navigationController: UINavigationController
 
     // MARK: - Public Properties
     private(set) lazy var authenticationController: AuthenticationController = AuthenticationController(
@@ -38,6 +38,23 @@ final class ApplicationController {
     }
 }
 
+// MARK: - Error Handling
+private extension ApplicationController {
+    func handle(error: Error) {
+        let alert = UIAlertController(
+            title: "Error",
+            message: error.localizedDescription,
+            preferredStyle: .alert
+        )
+        alert.addAction(UIAlertAction(
+            title: "OK",
+            style: .default,
+            handler: nil
+        ))
+        navigationController.present(alert, animated: true, completion: nil)
+    }
+}
+
 private extension ApplicationController {
     func showLogin() {
         print(#function)
@@ -47,9 +64,10 @@ private extension ApplicationController {
     }
 }
 
+// MARK: - AuthenticationControllerDelegate
 extension ApplicationController: AuthenticationControllerDelegate {
     func authenticationError(controller: AuthenticationController, error: Error) {
-        print(error)
+        handle(error: error)
     }
     func authenticationLogin(controller: AuthenticationController, authentication: Authentication) {
         showTweets()
