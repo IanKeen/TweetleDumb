@@ -11,6 +11,7 @@ import Foundation
 protocol TweetsViewModelDelegate: class {
     func tweetsViewModelUpdated(_ viewModel: TweetsViewModel)
     func tweetsViewModel(_ viewModel: TweetsViewModel, error: Error)
+    func tweetsViewModelCompose(_ viewModel: TweetsViewModel)
 }
 
 final class TweetsViewModel {
@@ -59,5 +60,8 @@ final class TweetsViewModel {
     }
     func logout() {
         dependencies.authenticationController.logout()
+    }
+    func compose() {
+        delegate.notify { $0.tweetsViewModelCompose(self) }
     }
 }

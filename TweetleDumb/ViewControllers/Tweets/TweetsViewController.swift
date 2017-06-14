@@ -20,6 +20,11 @@ final class TweetsViewController: CustomViewController<TweetsView, TweetsViewMod
             target: self,
             action: #selector(logoutBarButtonItemTouchUpInside)
         )
+        navigationItem.rightBarButtonItem = UIBarButtonItem(
+            barButtonSystemItem: .add,
+            target: self,
+            action: #selector(composeBarButtonItemTouchUpInside)
+        )
     }
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
@@ -54,6 +59,10 @@ final class TweetsViewController: CustomViewController<TweetsView, TweetsViewMod
     @objc private func logoutBarButtonItemTouchUpInside(sender: UIBarButtonItem) {
         viewModel.logout()
     }
+    @objc private func composeBarButtonItemTouchUpInside(sender: UIBarButtonItem) {
+        viewModel.compose()
+    }
+
 }
 
 extension TweetsViewController: TweetsViewModelDelegate {
@@ -63,5 +72,8 @@ extension TweetsViewController: TweetsViewModelDelegate {
     func tweetsViewModelUpdated(_ viewModel: TweetsViewModel) {
         customView.reloadData()
         customView.refreshControl?.endRefreshing()
+    }
+    func tweetsViewModelCompose(_ viewModel: TweetsViewModel) {
+        //
     }
 }

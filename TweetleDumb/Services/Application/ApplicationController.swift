@@ -78,6 +78,9 @@ private extension ApplicationController {
         navigationController.setViewControllers([viewController], animated: navigationController.shouldAnimate)
         navigationController.setNavigationBarHidden(false, animated: navigationController.shouldAnimate)
     }
+    func showCompose(target: TweetsViewModel) {
+        print("Compose Tweet")
+    }
 }
 
 // MARK: - TweetsViewModelDelegate
@@ -87,6 +90,9 @@ extension ApplicationController: TweetsViewModelDelegate {
     }
     func tweetsViewModel(_ viewModel: TweetsViewModel, error: Error) {
         handle(error: error)
+    }
+    func tweetsViewModelCompose(_ viewModel: TweetsViewModel) {
+        showCompose(target: viewModel)
     }
 }
 
