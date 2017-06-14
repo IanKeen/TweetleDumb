@@ -26,7 +26,9 @@ final class ApplicationController {
     )
     private(set) lazy var api: API = API(
         network: self.environment.network,
-        baseURL: self.environment.baseURL
+        baseURL: self.environment.baseURL,
+        authenticationState: self.authenticationState
+        
     )
 
     // MARK: - Lifecycle

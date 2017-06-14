@@ -12,6 +12,8 @@ struct AuthenticationRequest: APIRequest {
     let authenticator: String
     let token: String
 
+    let requiresAuthentication = false
+
     func networkRequest(baseURL: URL) throws -> NetworkRequest {
         return NetworkRequest(
             method: .POST,
