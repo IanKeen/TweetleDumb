@@ -8,7 +8,7 @@
 
 import Foundation
 
-protocol AuthenticationControllerDelegate {
+protocol AuthenticationControllerDelegate: class {
     func authenticationError(controller: AuthenticationController, error: Swift.Error)
     func authenticationLogin(controller: AuthenticationController, authentication: Authentication)
     func authenticationLogout(controller: AuthenticationController)

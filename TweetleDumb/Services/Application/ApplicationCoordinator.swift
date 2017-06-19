@@ -116,6 +116,7 @@ extension ApplicationCoordinator: ComposeViewModelDelegate {
     private func endCompose(_ viewModel: ComposeViewModel) {
         composeContainer?.dismiss(animated: true, completion: nil)
         viewModel.delegate.removeAll()
+        composeContainer = nil
     }
     func composeViewModel(_ viewModel: ComposeViewModel, newTweet: Tweet) {
         endCompose(viewModel)

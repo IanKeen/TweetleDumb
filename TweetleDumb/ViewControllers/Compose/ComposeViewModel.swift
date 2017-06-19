@@ -8,7 +8,7 @@
 
 import Foundation
 
-protocol ComposeViewModelDelegate {
+protocol ComposeViewModelDelegate: class {
     func composeViewModelCancel(_ viewModel: ComposeViewModel)
     func composeViewModel(_ viewModel: ComposeViewModel, error: Error)
     func composeViewModel(_ viewModel: ComposeViewModel, newTweet: Tweet)

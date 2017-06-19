@@ -10,7 +10,7 @@ import Foundation
 
 final class MulticastDelegate<T> {
     // MARK: - Private Properties
-    private var delegates: [AnyObject] = []
+    private var delegates = NSHashTable<AnyObject>(options: [.weakMemory])
 
     // MARK: - Lifecycle
     deinit {
@@ -19,17 +19,15 @@ final class MulticastDelegate<T> {
 
     // MARK: - Public Functions
     func add(_ delegate: T) {
-        delegates.append(delegate as AnyObject)
+        delegates.add(delegate as AnyObject)
     }
     func remove(_ delegate: T) {
-        guard let index = delegates.index(where: { $0 === (delegate as AnyObject) }) else { return }
-
-        delegates.remove(at: index)
+        delegates.remove(delegate as AnyObject)
     }
     func removeAll() {
-        delegates.removeAll()
+        delegates.removeAllObjects()
     }
     func notify(_ closure: (T) -> Void) {
-        delegates.map({ $0 as! T }).forEach(closure)
+        delegates.allObjects.map({ $0 as! T }).forEach(closure)
     }
 }

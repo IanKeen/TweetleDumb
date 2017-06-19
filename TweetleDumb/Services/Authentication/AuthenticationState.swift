@@ -21,7 +21,7 @@ extension AuthenticationState {
     }
 }
 
-protocol AuthenticationStateDelegate {
+protocol AuthenticationStateDelegate: class {
     func authenticationStateUpdated(_ authenticationState: AuthenticationState, from old: Authentication?, to new: Authentication?)
 }
 
