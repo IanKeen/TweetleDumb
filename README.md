@@ -1,7 +1,7 @@
 # TweetleDumb
 Mock (dumb) Twitter client
 
-## Though Process
+## Thought Process
 Even though this is a mock client I wanted to approach it with the mindset that the mock components (network/auth) could be swapped out for their 'real' counterparts and the app would essentially 'just work'™. The core components and view models have included tests.
 
 ## What's not included
