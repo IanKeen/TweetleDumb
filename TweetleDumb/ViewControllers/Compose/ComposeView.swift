@@ -11,7 +11,7 @@ import UIKit
 final class ComposeView: UIView {
     // MARK: - Elements
     private(set) lazy var activityIndicator: UIActivityIndicatorView = {
-        let indicator = UIActivityIndicatorView(activityIndicatorStyle: .gray)
+        let indicator = UIActivityIndicatorView(style: .gray)
         indicator.translatesAutoresizingMaskIntoConstraints = false
         indicator.hidesWhenStopped = true
         indicator.tintColor = .black

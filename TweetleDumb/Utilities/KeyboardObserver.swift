@@ -22,7 +22,7 @@ final class KeyboardObserver {
 
     // MARK: - Public Functions
     func start() {
-        let notifications: [Notification.Name] = [.UIKeyboardWillShow, .UIKeyboardWillHide]
+        let notifications: [Notification.Name] = [UIResponder.keyboardWillShowNotification, UIResponder.keyboardWillHideNotification]
         observers = notifications.map(subscribe(to:))
     }
     func stop() {
@@ -42,7 +42,7 @@ final class KeyboardObserver {
                     x: this.container.frame.origin.x,
                     y: this.container.frame.origin.y,
                     width: this.container.frame.size.width,
-                    height: (notification == .UIKeyboardWillHide) ? this.originalHeight : this.container.frame.size.height + offset
+                    height: (notification == UIResponder.keyboardWillHideNotification) ? this.originalHeight : this.container.frame.size.height + offset
                 )
             })
         }
@@ -50,8 +50,8 @@ final class KeyboardObserver {
     private func offset(from notification: Notification) -> CGFloat {
         guard
             let userInfo = notification.userInfo,
-            let begin = userInfo[UIKeyboardFrameBeginUserInfoKey] as? NSValue,
-            let end = userInfo[UIKeyboardFrameEndUserInfoKey] as? NSValue
+            let begin = userInfo[UIResponder.keyboardFrameBeginUserInfoKey] as? NSValue,
+            let end = userInfo[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue
             else { return .leastNormalMagnitude }
 
         return end.cgRectValue.minY - begin.cgRectValue.minY
@@ -59,7 +59,7 @@ final class KeyboardObserver {
     private func duration(from notification: Notification) -> TimeInterval {
         guard
             let userInfo = notification.userInfo,
-            let duration = userInfo[UIKeyboardAnimationDurationUserInfoKey] as? TimeInterval
+            let duration = userInfo[UIResponder.keyboardAnimationDurationUserInfoKey] as? TimeInterval
             else { return 0 }
 
         return duration

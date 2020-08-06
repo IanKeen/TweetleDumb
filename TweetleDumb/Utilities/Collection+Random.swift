@@ -8,7 +8,7 @@
 
 import Foundation
 
-extension Collection where IndexDistance == Int, Index == Int {
+extension Collection where Index == Int {
     func random() -> Iterator.Element? {
         guard !isEmpty else { return nil }
 

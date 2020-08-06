@@ -23,6 +23,6 @@ struct TweetsRequest: APIRequest {
             let json = response.jsonArray as? [[String: Any]]
             else { throw NetworkError.invalidResponse(response) }
 
-        return try json.flatMap(Tweet.init(json:))
+        return try json.compactMap(Tweet.init(json:))
     }
 }

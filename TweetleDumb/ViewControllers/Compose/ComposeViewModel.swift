@@ -34,7 +34,7 @@ final class ComposeViewModel {
         guard let text = text, !text.isEmpty
             else { return delegate.notify { $0.composeViewModel(self, error: Error.noText) } }
 
-        guard text.characters.count <= maxLength
+        guard text.count <= maxLength
             else { return delegate.notify { $0.composeViewModel(self, error: Error.textTooLong(maxLength)) } }
 
         guard let authentication = dependencies.readOnlyAuthenticationState.authentication

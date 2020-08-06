@@ -10,7 +10,7 @@ import UIKit
 
 final class TweetsView: UITableView {
     // MARK: - Lifecycle
-    override init(frame: CGRect, style: UITableViewStyle) {
+    override init(frame: CGRect, style: UITableView.Style) {
         super.init(frame: frame, style: style)
         configure()
     }
@@ -19,7 +19,7 @@ final class TweetsView: UITableView {
         configure()
     }
     private func configure() {
-        rowHeight = UITableViewAutomaticDimension
+        rowHeight = UITableView.automaticDimension
         estimatedRowHeight = 100
 
         separatorStyle = .none

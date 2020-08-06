@@ -25,15 +25,15 @@ final class LoginView: UIView {
         let title = NSAttributedString(
             string: "Login",
             attributes: [
-                NSFontAttributeName: UIFont.systemFont(ofSize: 20),
-                NSForegroundColorAttributeName: UIColor.white
+                NSAttributedString.Key.font: UIFont.systemFont(ofSize: 20),
+                NSAttributedString.Key.foregroundColor: UIColor.white
             ]
         )
         button.setAttributedTitle(title, for: .normal)
         return button
     }()
     private(set) lazy var activityIndicator: UIActivityIndicatorView = {
-        let indicator = UIActivityIndicatorView(activityIndicatorStyle: .gray)
+        let indicator = UIActivityIndicatorView(style: .gray)
         indicator.translatesAutoresizingMaskIntoConstraints = false
         indicator.hidesWhenStopped = true
         indicator.tintColor = .black
